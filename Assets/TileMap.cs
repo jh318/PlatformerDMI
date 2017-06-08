@@ -5,12 +5,26 @@ using UnityEngine;
 
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
-public class TileMesh : MonoBehaviour {
+public class TileMap : MonoBehaviour {
 
-	public int tileCount = 20;
+	//public int tileCount = 20;
+	public int width = 10;
+	public int height = 10;
 
-	[ContextMenu("Setup Mesh")]
-	void SetupMesh(){
+	[HideInInspector]public int[] tileArray;
+
+
+	public void SetTile(int x, int y, int tile){
+		if (tileArray == null || tileArray.Length != (width * height)) {
+			tileArray = new int[width * height];
+		}
+
+		tileArray [x + y * width] = tile;
+		Setup ();
+	}
+
+	[ContextMenu("Setup")]
+	void Setup(){
 		MeshFilter meshFilter = GetComponent<MeshFilter>();
 		MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
 
@@ -19,8 +33,10 @@ public class TileMesh : MonoBehaviour {
 		List<int> triangles = new List<int> ();
 
 		int index = 0;
-		for (int x = 0; x < tileCount; x++) {
-			for (int y = 0; y < tileCount; y++) {
+		for (int x = 0; x < width; x++) {
+			for (int y = 0; y < height; y++) {
+				if (tileArray [x + y * width] == 0) continue;
+
 				verts.AddRange (new Vector3[] {
 					new Vector3(x, y, 0),
 					new Vector3(x, y+1, 0),

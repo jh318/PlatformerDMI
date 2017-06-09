@@ -11,6 +11,12 @@ public class TileMap : MonoBehaviour {
 	public int width = 10;
 	public int height = 10;
 
+	public Texture2D texture;
+	public int tileWidth = 64;
+	public int tileHeight = 64;
+	public int tilePadding;
+	public int tileSpacing;
+
 	[HideInInspector]public int[] tileArray;
 
 
@@ -21,6 +27,26 @@ public class TileMap : MonoBehaviour {
 
 		tileArray [x + y * width] = tile;
 		Setup ();
+	}
+
+	Vector2[] GetUVs(int tile){
+		int columns = texture.width / tileWidth;
+		int row = tile / columns;
+		int column = tile % columns;
+
+		float uvWidth = (float)tileWidth / (float)texture.width;
+		float uvHeight = (float)tileHeight / (float)texture.height;
+
+		float uvX = (float) (tilePadding + column * (tileWidth + tileSpacing)) / (float) texture.width;
+		float uvY = (float) (tilePadding + row * (tileHeight + tileSpacing)) / (float) texture.height;
+
+		return new Vector2[]{
+			new Vector2(uvX, uvY),
+			new Vector2(uvX, uvY + uvHeight),
+			new Vector2(uvX + uvWidth, uvY + uvHeight),
+			new Vector2(uvX + uvWidth, uvY)
+		};
+
 	}
 
 	[ContextMenu("Setup")]
@@ -35,7 +61,8 @@ public class TileMap : MonoBehaviour {
 		int index = 0;
 		for (int x = 0; x < width; x++) {
 			for (int y = 0; y < height; y++) {
-				if (tileArray [x + y * width] == 0) continue;
+				int tile = tileArray [x + y * width];
+				if (tile < 0) continue;
 
 				verts.AddRange (new Vector3[] {
 					new Vector3(x, y, 0),
@@ -45,24 +72,21 @@ public class TileMap : MonoBehaviour {
 				});
 		
 
-			uvs.AddRange(new Vector2[]{
-				Vector2.zero,
-				Vector2.up,
-				Vector2.one,
-				Vector2.right
-			});
+				uvs.AddRange(GetUVs(tile));
 
 			
-			triangles.AddRange(new int[]{
-				index, index+1, index+2,
-				index, index+2, index+3
-			});
-			index += 4;
+				triangles.AddRange(new int[]{
+					index, index+1, index+2,
+					index, index+2, index+3
+				});
+
+				index += 4;
 
 			}
 		}
 		Mesh mesh = new Mesh();
 		mesh.vertices = verts.ToArray();
+		mesh.uv = uvs.ToArray ();
 
 		mesh.triangles = triangles.ToArray();
 		meshFilter.sharedMesh = mesh;

@@ -6,12 +6,16 @@ using UnityEditor;
 [CustomEditor(typeof(TileMap))]
 public class TileMapEditor : Editor {
 
+	public static int tile = 0;
+
 	public TileMap tileMap{
 		get{ return target as TileMap; }
 	}
 
 	public override void OnInspectorGUI(){
 		base.OnInspectorGUI ();
+
+		tile = EditorGUILayout.IntField ("Tile", tile);
 	}
 
 	void OnSceneGUI(){
@@ -25,14 +29,19 @@ public class TileMapEditor : Editor {
 		Vector3 pos = MouseToWorld();
 		int x = (int)pos.x;
 		int y = (int)pos.y;
-		if (x > 0 && x < tileMap.width && y >= 0 && y < tileMap.height) {
+		if (x >= 0 && x < tileMap.width && y >= 0 && y < tileMap.height) {
 			if(e.type == EventType.MouseDown || e.type == EventType.MouseDrag){
-				tileMap.SetTile (x, y, e.button);
+				if (e.button == 0) {
+					tileMap.SetTile (x, y, tile);
+				} else if (e.button == 1) {
+					tileMap.SetTile (x, y, -1);
+				} 
 			}
+			e.Use ();
+			GUIUtility.hotControl = id;
 		}
 
-		e.Use ();
-		GUIUtility.hotControl = id;
+
 	}
 
 	Vector3 MouseToWorld() {

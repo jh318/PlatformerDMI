@@ -12,10 +12,48 @@ public class TileMapEditor : Editor {
 		get{ return target as TileMap; }
 	}
 
+	private Rect textureRect;
+
 	public override void OnInspectorGUI(){
 		base.OnInspectorGUI ();
 
 		tile = EditorGUILayout.IntField ("Tile", tile);
+
+		Event e = Event.current;
+
+		float w = Screen.width - 40;
+		float h = Screen.width * tileMap.texture.height / tileMap.texture.width;
+		if (w > tileMap.texture.width) {
+			w = tileMap.texture.width;
+			h = tileMap.texture.height;
+		}
+
+		textureRect = GUILayoutUtility.GetRect (w, h);
+		textureRect.width = textureRect.height * tileMap.texture.width / tileMap.texture.height;
+		GUI.DrawTexture (textureRect, tileMap.texture);
+
+
+		Vector2[] uvs = tileMap.GetUVs (tile);
+		Vector3[] verts = System.Array.ConvertAll(uvs, (u) => {
+			Vector3 v = (Vector3)(textureRect.position);
+			v.x += textureRect.width * u.x;
+			v.y += textureRect.height * (1 - u.y);
+			return v;
+		});
+
+		Handles.DrawSolidRectangleWithOutline (verts, Color.clear, Color.white);
+		HandleUtility.Repaint ();
+
+		if (e.type == EventType.mouseDown) {
+			if (textureRect.Contains (e.mousePosition)) {
+			Vector2 pos = e.mousePosition - textureRect.position;
+			pos.x *= tileMap.columns / textureRect.width;
+			pos.y *= tileMap.rows / textureRect.height;
+			pos.y = tileMap.rows - pos.y;
+			tile = (int)pos.x + (int)pos.y * tileMap.columns;
+			Debug.Log (tile);
+			} 
+		}
 	}
 
 	void OnSceneGUI(){

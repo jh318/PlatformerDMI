@@ -1,0 +1,3576 @@
+fileFormatVersion: 2
+guid: d5266747b9e0e2b46ab3a443a3abcaec
+timeCreated: 1497657463
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: FalconArmor_0
+    21300002: FalconArmor_1
+    21300004: FalconArmor_2
+    21300006: FalconArmor_3
+    21300008: FalconArmor_4
+    21300010: FalconArmor_5
+    21300012: FalconArmor_6
+    21300014: FalconArmor_7
+    21300016: FalconArmor_8
+    21300018: FalconArmor_9
+    21300020: FalconArmor_10
+    21300022: FalconArmor_11
+    21300024: FalconArmor_12
+    21300026: FalconArmor_13
+    21300028: FalconArmor_14
+    21300030: FalconArmor_15
+    21300032: FalconArmor_16
+    21300034: FalconArmor_17
+    21300036: FalconArmor_18
+    21300038: FalconArmor_19
+    21300040: FalconArmor_20
+    21300042: FalconArmor_21
+    21300044: FalconArmor_22
+    21300046: FalconArmor_23
+    21300048: FalconArmor_24
+    21300050: FalconArmor_25
+    21300052: FalconArmor_26
+    21300054: FalconArmor_27
+    21300056: FalconArmor_28
+    21300058: FalconArmor_29
+    21300060: FalconArmor_30
+    21300062: FalconArmor_31
+    21300064: FalconArmor_32
+    21300066: FalconArmor_33
+    21300068: FalconArmor_34
+    21300070: FalconArmor_35
+    21300072: FalconArmor_36
+    21300074: FalconArmor_37
+    21300076: FalconArmor_38
+    21300078: FalconArmor_39
+    21300080: FalconArmor_40
+    21300082: FalconArmor_41
+    21300084: FalconArmor_42
+    21300086: FalconArmor_43
+    21300088: FalconArmor_44
+    21300090: FalconArmor_45
+    21300092: FalconArmor_46
+    21300094: FalconArmor_47
+    21300096: FalconArmor_48
+    21300098: FalconArmor_49
+    21300100: FalconArmor_50
+    21300102: FalconArmor_51
+    21300104: FalconArmor_52
+    21300106: FalconArmor_53
+    21300108: FalconArmor_54
+    21300110: FalconArmor_55
+    21300112: FalconArmor_56
+    21300114: FalconArmor_57
+    21300116: FalconArmor_58
+    21300118: FalconArmor_59
+    21300120: FalconArmor_60
+    21300122: FalconArmor_61
+    21300124: FalconArmor_62
+    21300126: FalconArmor_63
+    21300128: FalconArmor_64
+    21300130: FalconArmor_65
+    21300132: FalconArmor_66
+    21300134: FalconArmor_67
+    21300136: FalconArmor_68
+    21300138: FalconArmor_69
+    21300140: FalconArmor_70
+    21300142: FalconArmor_71
+    21300144: FalconArmor_72
+    21300146: FalconArmor_73
+    21300148: FalconArmor_74
+    21300150: FalconArmor_75
+    21300152: FalconArmor_76
+    21300154: FalconArmor_77
+    21300156: FalconArmor_78
+    21300158: FalconArmor_79
+    21300160: FalconArmor_80
+    21300162: FalconArmor_81
+    21300164: FalconArmor_82
+    21300166: FalconArmor_83
+    21300168: FalconArmor_84
+    21300170: FalconArmor_85
+    21300172: FalconArmor_86
+    21300174: FalconArmor_87
+    21300176: FalconArmor_88
+    21300178: FalconArmor_89
+    21300180: FalconArmor_90
+    21300182: FalconArmor_91
+    21300184: FalconArmor_92
+    21300186: FalconArmor_93
+    21300188: FalconArmor_94
+    21300190: FalconArmor_95
+    21300192: FalconArmor_96
+    21300194: FalconArmor_97
+    21300196: FalconArmor_98
+    21300198: FalconArmor_99
+    21300200: FalconArmor_100
+    21300202: FalconArmor_101
+    21300204: FalconArmor_102
+    21300206: FalconArmor_103
+    21300208: FalconArmor_104
+    21300210: FalconArmor_105
+    21300212: FalconArmor_106
+    21300214: FalconArmor_107
+    21300216: FalconArmor_108
+    21300218: FalconArmor_109
+    21300220: FalconArmor_110
+    21300222: FalconArmor_111
+    21300224: FalconArmor_112
+    21300226: FalconArmor_113
+    21300228: FalconArmor_114
+    21300230: FalconArmor_115
+    21300232: FalconArmor_116
+    21300234: FalconArmor_117
+    21300236: FalconArmor_118
+    21300238: FalconArmor_119
+    21300240: FalconArmor_120
+    21300242: FalconArmor_121
+    21300244: FalconArmor_122
+    21300246: FalconArmor_123
+    21300248: FalconArmor_124
+    21300250: FalconArmor_125
+    21300252: FalconArmor_126
+    21300254: FalconArmor_127
+    21300256: FalconArmor_128
+    21300258: FalconArmor_129
+    21300260: FalconArmor_130
+    21300262: FalconArmor_131
+    21300264: FalconArmor_132
+    21300266: FalconArmor_133
+    21300268: FalconArmor_134
+    21300270: FalconArmor_135
+    21300272: FalconArmor_136
+    21300274: FalconArmor_137
+    21300276: FalconArmor_138
+    21300278: FalconArmor_139
+    21300280: FalconArmor_140
+    21300282: FalconArmor_141
+    21300284: FalconArmor_142
+    21300286: FalconArmor_143
+    21300288: FalconArmor_144
+    21300290: FalconArmor_145
+    21300292: FalconArmor_146
+    21300294: FalconArmor_147
+    21300296: FalconArmor_148
+    21300298: FalconArmor_149
+    21300300: FalconArmor_150
+    21300302: FalconArmor_151
+    21300304: FalconArmor_152
+    21300306: FalconArmor_153
+    21300308: FalconArmor_154
+    21300310: FalconArmor_155
+    21300312: FalconArmor_156
+    21300314: FalconArmor_157
+    21300316: FalconArmor_158
+    21300318: FalconArmor_159
+    21300320: FalconArmor_160
+    21300322: FalconArmor_161
+    21300324: FalconArmor_162
+    21300326: FalconArmor_163
+    21300328: FalconArmor_164
+    21300330: FalconArmor_165
+    21300332: FalconArmor_166
+    21300334: FalconArmor_167
+    21300336: FalconArmor_168
+    21300338: FalconArmor_169
+    21300340: FalconArmor_170
+    21300342: FalconArmor_171
+    21300344: FalconArmor_172
+    21300346: FalconArmor_173
+    21300348: FalconArmor_174
+    21300350: FalconArmor_175
+    21300352: FalconArmor_176
+    21300354: FalconArmor_177
+    21300356: FalconArmor_178
+    21300358: FalconArmor_179
+    21300360: FalconArmor_180
+    21300362: FalconArmor_181
+    21300364: FalconArmor_182
+    21300366: FalconArmor_183
+    21300368: FalconArmor_184
+    21300370: FalconArmor_185
+    21300372: FalconArmor_186
+    21300374: FalconArmor_187
+    21300376: FalconArmor_188
+    21300378: FalconArmor_189
+    21300380: FalconArmor_190
+    21300382: FalconArmor_191
+    21300384: FalconArmor_192
+    21300386: FalconArmor_193
+    21300388: FalconArmor_194
+    21300390: FalconArmor_195
+    21300392: FalconArmor_196
+    21300394: FalconArmor_197
+    21300396: FalconArmor_198
+    21300398: FalconArmor_199
+    21300400: FalconArmor_200
+    21300402: FalconArmor_201
+    21300404: FalconArmor_202
+    21300406: FalconArmor_203
+    21300408: FalconArmor_204
+    21300410: FalconArmor_205
+    21300412: FalconArmor_206
+    21300414: FalconArmor_207
+    21300416: FalconArmor_208
+    21300418: FalconArmor_209
+    21300420: FalconArmor_210
+    21300422: FalconArmor_211
+    21300424: FalconArmor_212
+    21300426: FalconArmor_213
+    21300428: FalconArmor_214
+    21300430: FalconArmor_215
+    21300432: FalconArmor_216
+    21300434: FalconArmor_217
+    21300436: FalconArmor_218
+    21300438: FalconArmor_219
+    21300440: FalconArmor_220
+    21300442: FalconArmor_221
+    21300444: FalconArmor_222
+    21300446: FalconArmor_223
+    21300448: FalconArmor_224
+    21300450: FalconArmor_225
+    21300452: FalconArmor_226
+    21300454: FalconArmor_227
+    21300456: FalconArmor_228
+    21300458: FalconArmor_229
+    21300460: FalconArmor_230
+    21300462: FalconArmor_231
+    21300464: FalconArmor_232
+    21300466: FalconArmor_233
+    21300468: FalconArmor_234
+    21300470: FalconArmor_235
+    21300472: FalconArmor_236
+    21300474: FalconArmor_237
+    21300476: FalconArmor_238
+    21300478: FalconArmor_239
+    21300480: FalconArmor_240
+    21300482: FalconArmor_241
+    21300484: FalconArmor_242
+    21300486: FalconArmor_243
+    21300488: FalconArmor_244
+    21300490: FalconArmor_245
+    21300492: FalconArmor_246
+    21300494: FalconArmor_247
+    21300496: FalconArmor_248
+    21300498: FalconArmor_249
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 50
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FalconArmor_0
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1734
+        width: 40
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_1
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 1734
+        width: 38
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_2
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1734
+        width: 35
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_3
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1734
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1734
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_5
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 1734
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1734
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_7
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 1680
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_8
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1680
+        width: 52
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_9
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1680
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_10
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 1680
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_11
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1680
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_12
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 1656
+        width: 50
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_13
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 1680
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1604
+        width: 50
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_15
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1604
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_16
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1602
+        width: 54
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_17
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 1599
+        width: 60
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_18
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 1598
+        width: 45
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_19
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1597
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_20
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1604
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_21
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1604
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_22
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1542
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_23
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1539
+        width: 32
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_24
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 1536
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_25
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1536
+        width: 26
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_26
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1538
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_27
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1539
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_28
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1537
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_29
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1535
+        width: 33
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_30
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1534
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_31
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 1533
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_32
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1534
+        width: 32
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_33
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1477
+        width: 42
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_34
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1478
+        width: 53
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_35
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1513
+        width: 37
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_36
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 1477
+        width: 59
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_37
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 1479
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_38
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1422
+        width: 53
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_39
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1422
+        width: 56
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_40
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1422
+        width: 56
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_41
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1422
+        width: 67
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_42
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1421
+        width: 71
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_43
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1421
+        width: 63
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_44
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1453
+        width: 23
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_45
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 1360
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_46
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1360
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_47
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1360
+        width: 56
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_48
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 1360
+        width: 46
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_49
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 1360
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_50
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1390
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_51
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 1358
+        width: 57
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_52
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1393
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_53
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1368
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_54
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1365
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_55
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1354
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_56
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1321
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_57
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1332
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_58
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 1293
+        width: 57
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_59
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 1292
+        width: 64
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_60
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1332
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_61
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 1334
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_62
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1296
+        width: 57
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_63
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 1293
+        width: 63
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_64
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1290
+        width: 62
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_65
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1291
+        width: 59
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_66
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 1232
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_67
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1231
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_68
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 1231
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_69
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 1233
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_70
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1233
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_71
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1234
+        width: 48
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_72
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1235
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_73
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1234
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_74
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1172
+        width: 28
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_75
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1173
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_76
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1172
+        width: 40
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_77
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 1173
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_78
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 1174
+        width: 42
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_79
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 1172
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_80
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1171
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_81
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1172
+        width: 28
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_82
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1114
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_83
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1114
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_84
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1116
+        width: 53
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_85
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1116
+        width: 57
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_86
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1116
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_87
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 1115
+        width: 32
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_88
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1116
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_89
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 1115
+        width: 39
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_90
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 997
+        width: 60
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_91
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1061
+        width: 38
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_92
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 990
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_93
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1063
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_94
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 986
+        width: 63
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_95
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 1061
+        width: 49
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_96
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 1061
+        width: 49
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_97
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 983
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_98
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1064
+        width: 52
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_99
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 982
+        width: 53
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_100
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1040
+        width: 78
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_101
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 981
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_102
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 921
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_103
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 921
+        width: 45
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_104
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 918
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_105
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 918
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_106
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 916
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_107
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 916
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_108
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 916
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_109
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 916
+        width: 38
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_110
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 918
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_111
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 918
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_112
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 919
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_113
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 919
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_114
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 853
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_115
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 853
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_116
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 851
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_117
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 851
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_118
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 850
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_119
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 850
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_120
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 849
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_121
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 849
+        width: 40
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_122
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 849
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_123
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 849
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_124
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 794
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_125
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 794
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_126
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 793
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_127
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 793
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_128
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 793
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_129
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 793
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_130
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 793
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_131
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 793
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_132
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 738
+        width: 55
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_133
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 738
+        width: 55
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_134
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 738
+        width: 54
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_135
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 738
+        width: 54
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_136
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 738
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_137
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 738
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_138
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 738
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_139
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 738
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_140
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 681
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_141
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 681
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_142
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 681
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_143
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 681
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_144
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 681
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_145
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 681
+        width: 50
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_146
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 682
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_147
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 682
+        width: 54
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_148
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 624
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_149
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 624
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_150
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 623
+        width: 51
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_151
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 622
+        width: 51
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_152
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 622
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_153
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 622
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_154
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 622
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_155
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 622
+        width: 42
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_156
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 568
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_157
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 568
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_158
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 568
+        width: 58
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_159
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 569
+        width: 58
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_160
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 569
+        width: 63
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_161
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 569
+        width: 63
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_162
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 569
+        width: 67
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_163
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 569
+        width: 67
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_164
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 513
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_165
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 513
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_166
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 513
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_167
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 513
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_168
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 514
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_169
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 514
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_170
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 514
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_171
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 514
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_172
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 448
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_173
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 445
+        width: 34
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_174
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 446
+        width: 34
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_175
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 445
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_176
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 445
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_177
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 445
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_178
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 446
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_179
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 446
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_180
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 443
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_181
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 443
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_182
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 374
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_183
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 375
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_184
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 377
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_185
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 377
+        width: 42
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_186
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 379
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_187
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 379
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_188
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 379
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_189
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 379
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_190
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 301
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_191
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 302
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_192
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 299
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_193
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 300
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_194
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 305
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_195
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 306
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_196
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 300
+        width: 28
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_197
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 297
+        width: 30
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_198
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 301
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_199
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 300
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_200
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 320
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_201
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 327
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_202
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 227
+        width: 44
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_203
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 227
+        width: 44
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_204
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 228
+        width: 44
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_205
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 227
+        width: 33
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_206
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 228
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_207
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 228
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_208
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 226
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_209
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 226
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_210
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 161
+        width: 38
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_211
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 163
+        width: 35
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_212
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 157
+        width: 51
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_213
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 160
+        width: 43
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_214
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 159
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_215
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 161
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_216
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 206
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_217
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 161
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_218
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 162
+        width: 40
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_219
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 101
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_220
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 101
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_221
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 101
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_222
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 101
+        width: 34
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_223
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 101
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_224
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 101
+        width: 33
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_225
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 26
+        width: 6
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_226
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 77
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_227
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 72
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_228
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 15
+        width: 55
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_229
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 83
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_230
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 19
+        width: 46
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_231
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 64
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_232
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 11
+        width: 44
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_233
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 67
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_234
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 68
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_235
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 69
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_236
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 15
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_237
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 15
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_238
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 15
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_239
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 14
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_240
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 11
+        width: 44
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_241
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 36
+        width: 9
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_242
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 56
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_243
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 15
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_244
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 28
+        width: 8
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_245
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 43
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_246
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 48
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_247
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 47
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_248
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 39
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FalconArmor_249
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 37
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

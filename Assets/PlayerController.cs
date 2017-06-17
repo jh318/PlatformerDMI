@@ -6,15 +6,21 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed = 5.0f;
 	public float jumpForce = 200.0f;
+	public int jumpCountMax = 2;
+	private int jumpCount = 0;
 
 	Rigidbody2D body;
 	Animator anim;
+	List<GameObject> ground = new List<GameObject>();
 	float horizontal;
 	float vertical;
-	List<GameObject> ground = new List<GameObject>();
-
+	float lastVertical;
 	public bool isGrounded {
 		get { return ground.Count > 0; }
+	}
+
+	public bool shouldJump {
+		get { return lastVertical < 0.5f && vertical >= 0.5f; }
 	}
 
 	void Start(){
@@ -27,7 +33,6 @@ public class PlayerController : MonoBehaviour {
 		FlipSprite ();
 		SetVelocity ();
 		SetAnimations ();
-		CollisionCheck ();
 
 
 
@@ -37,6 +42,7 @@ public class PlayerController : MonoBehaviour {
 
 	void GetAxis(){
 		horizontal = Input.GetAxisRaw("Horizontal");
+		lastVertical = vertical;
 		vertical = Input.GetAxisRaw ("Vertical");
 	}
 
@@ -52,25 +58,24 @@ public class PlayerController : MonoBehaviour {
 	void SetVelocity(){
 		body.velocity = new Vector2(horizontal * speed, body.velocity.y);
 
-		if (vertical > 0.1f && isGrounded) {
-			body.AddForce (transform.up * jumpForce, ForceMode2D.Impulse);
+		if (shouldJump && (isGrounded || jumpCount < jumpCountMax)) {
+			jumpCount++;
+			body.velocity = new Vector2(body.velocity.x, jumpForce);
 		}
 	}
 		
 	void SetAnimations(){
 		anim.SetBool ("isRunning", Mathf.Abs (horizontal) > 0.1f);
-		anim.SetBool ("isJumping", (!isGrounded));
-		anim.SetBool ("isIdle", (isGrounded && body.velocity == new Vector2 (0, 0)));
-		//if (isGrounded && !anim.GetBool("isJumping")) {
-		//	anim.SetBool ("isLanding", true);
-		//}
-		//anim.SetBool("is", )
+		anim.SetBool ("isJumping", body.velocity.y > 0.5f);
+		anim.SetBool ("isIdle", (isGrounded && body.velocity.magnitude < 0.1f));
+		anim.SetBool ("isGrounded", isGrounded);
 	}
 
-	void CollisionCheck(){
+	void SetAttributes(){
+		if (isGrounded)
+			jumpCount = 2;
+	}
 		
-	}
-
 
 	///COLLISION
 	//Check for Ground
@@ -78,6 +83,7 @@ public class PlayerController : MonoBehaviour {
 		foreach (ContactPoint2D cp in c.contacts) {
 			if (Vector2.Angle (cp.normal, Vector2.up) < 45) {
 				ground.Add(c.gameObject);
+				jumpCount = 0;
 				return;
 			}
 		}

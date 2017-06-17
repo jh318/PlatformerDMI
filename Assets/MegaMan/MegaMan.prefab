@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4131106341937014}
   - component: {fileID: 95791306942584022}
   - component: {fileID: 50280882813168658}
+  - component: {fileID: 114792232118569738}
   m_Layer: 0
   m_Name: MegaMan
   m_TagString: Untagged
@@ -80,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1344724243723280}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.657, y: 3.692, z: 0}
+  m_LocalPosition: {x: 1.657, y: 4.549, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4538258533215358}
@@ -120,7 +121,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61059486787384280
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -155,7 +156,7 @@ Animator:
   m_GameObject: {fileID: 1344724243723280}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 548f393a8d3cb3b41b665ca7e2f10fe0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -163,6 +164,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114792232118569738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1344724243723280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5814b69a9bdc547b2fb4b074fd38e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jumpForce: 6
 --- !u!212 &212938147073167648
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -195,7 +209,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d5266747b9e0e2b46ab3a443a3abcaec, type: 3}
+  m_Sprite: {fileID: 21300002, guid: d5266747b9e0e2b46ab3a443a3abcaec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

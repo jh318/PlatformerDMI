@@ -76,8 +76,16 @@ public class PlayerController : MonoBehaviour {
 		
 
 	///COLLISION
-	//Check for Ground
 	void OnCollisionEnter2D(Collision2D c){
+		CheckForGround(c);
+	}
+
+	void OnCollisionExit2D(Collision2D c) {
+		PopGroundList(c);
+	}
+
+	//Collision Functions
+	void CheckForGround(Collision2D c){
 		foreach (ContactPoint2D cp in c.contacts) {
 			if (Vector2.Angle (cp.normal, Vector2.up) < 45) {
 				ground.Add(c.gameObject);
@@ -87,7 +95,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionExit2D(Collision2D c) {
+	void PopGroundList(Collision2D c){
 		if (ground.Contains(c.gameObject)) {
 			ground.Remove(c.gameObject);
 		}

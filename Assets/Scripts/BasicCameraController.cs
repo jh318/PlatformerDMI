@@ -8,9 +8,9 @@ public class BasicCameraController : MonoBehaviour {
 	public Vector3 offset = new Vector3(0,0,-10);
 	public float xLookAhead = 5.0f;
 
-	float extensionRate;
-	float compressionRate;
-	float maxOffset;
+	public float facingExtensionRate = 8.0f;
+	float compressionRate = 6.0f;
+	public float maxOffset = 5.0f;
 	Vector3 currentFacing;
 	Vector3 prevFacing;
 
@@ -20,13 +20,16 @@ public class BasicCameraController : MonoBehaviour {
 
 	float frac;
 
+	float movingOffsetX = 0;
+	float movingOffsetY = 0;
+
 	void Start(){
-		float starTime = Time.time;
-		offset = new Vector3(0, 0, -10);
-		offset = new Vector3(xLookAhead, 0, -10);
+		//float starTime = Time.time;
+		//offset = new Vector3(0, 0, -10);
+		//offset = new Vector3(xLookAhead, 0, -10);
 		//StartCoroutine(LerpLookAhead());
-		StartCoroutine(SuperCamera());
-		body = player.GetComponent<Rigidbody2D>();
+		//StartCoroutine(SuperCamera());
+		//body = player.GetComponent<Rigidbody2D>();
 	}
 
 	void Update(){
@@ -100,6 +103,47 @@ public class BasicCameraController : MonoBehaviour {
 
 			}
 			yield return new WaitForEndOfFrame();	
+		}
+	}
+
+	void LateUpdate(){
+		
+		OffsetCameraToMovementX ();
+		OffsetCameraToMovementY ();
+
+
+		movingOffsetX = Mathf.Clamp (movingOffsetX, -maxOffset, maxOffset);
+		movingOffsetY = Mathf.Clamp (movingOffsetY, -maxOffset, maxOffset);
+
+		Vector3 camPos = player.transform.position + new Vector3 (movingOffsetX, movingOffsetY, 0);
+		camPos.z = transform.position.z;
+
+		transform.position = camPos;
+
+
+	}
+
+	void OffsetCameraToMovementX(){
+		if (player.GetComponent<Rigidbody2D> ().velocity.x > 0.1f) {
+			movingOffsetX += facingExtensionRate * Time.deltaTime;
+		} 
+		else if (player.GetComponent<Rigidbody2D> ().velocity.x < -0.1f) {
+			movingOffsetX -= facingExtensionRate * Time.deltaTime;
+		} 
+		else {
+			movingOffsetX += 0;
+		}
+	}
+
+	void OffsetCameraToMovementY(){
+		if (player.GetComponent<Rigidbody2D> ().velocity.y > 0.1f) {
+			movingOffsetY += facingExtensionRate * Time.deltaTime;
+		} 
+		else if (player.GetComponent<PlayerController>().isGrounded == false) {
+			movingOffsetY -= facingExtensionRate * Time.deltaTime;
+		} 
+		else {
+			movingOffsetY += 0;
 		}
 	}
 

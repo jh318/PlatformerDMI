@@ -139,11 +139,12 @@ public class BasicCameraController : MonoBehaviour {
 		if (player.GetComponent<Rigidbody2D> ().velocity.y > 0.1f) {
 			movingOffsetY += facingExtensionRate * Time.deltaTime;
 		} 
-		else if (player.GetComponent<PlayerController>().isGrounded == false) {
+		else if (player.GetComponent<Rigidbody2D>().velocity.y < -0.1f) {
 			movingOffsetY -= facingExtensionRate * Time.deltaTime;
 		} 
 		else {
-			movingOffsetY += 0;
+			//movingOffsetY += Mathf.Abs(movingOffsetY) - facingExtensionRate * Time.deltaTime;
+			movingOffsetY = Mathf.Lerp(movingOffsetY, 0, Time.deltaTime);
 		}
 	}
 

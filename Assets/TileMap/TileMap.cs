@@ -8,20 +8,8 @@ using ClipperLib;
 [RequireComponent(typeof(PolygonCollider2D))]
 public class TileMap : MonoBehaviour {
 
-	[HideInInspector] public int _width = 100;
-	public int width {
-		get { return _width; }
-		set {
-			if (_width != value) SetupTileArray(value, _height);
-		}
-	}
-	[HideInInspector] private int _height = 100;
-	public int height {
-		get { return _height; }
-		set {
-			if (_height != value) SetupTileArray(_width, value);
-		}
-	}
+	[HideInInspector] public int width = 100;
+	[HideInInspector] public int height = 100;
     public Texture2D texture;
     public int tileWidth = 64;
     public int tileHeight = 64;
@@ -44,7 +32,7 @@ public class TileMap : MonoBehaviour {
 		}
 	}
 
-	void SetupTileArray (int w, int h) {
+	public void ResizeTileArray (int w, int h) {
 		if (tileArray == null || tileArray.Length != width * height) {
 			tileArray = new int[w * h];
 		}
@@ -61,15 +49,15 @@ public class TileMap : MonoBehaviour {
 			tileArray = newTileArray;
 		}
 
-		_width = w;
-		_height = h;
+		width = w;
+		height = h;
 	}
 	public void SetTile (int x, int y, int tile) {
 		if (tileArray == null || tileArray.Length != width * height) {
-			SetupTileArray(width, height);
+			ResizeTileArray(width, height);
 		}
 		tileArray[x + y * width] = tile;
-		Setup();
+		UpdateMesh();
 	}
 
     public Vector2[] GetUVs (int tile) {
@@ -89,8 +77,8 @@ public class TileMap : MonoBehaviour {
         };
     }
 
-	[ContextMenu("Setup")]
-	public void Setup () {
+	[ContextMenu("UpdateMesh")]
+	public void UpdateMesh () {
 		List<Vector3> verts = new List<Vector3>();
         List<Vector3> norms = new List<Vector3>();
         List<Vector2> uvs = new List<Vector2>();

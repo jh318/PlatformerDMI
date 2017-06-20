@@ -15,35 +15,37 @@ public class TileMapEditor : Editor {
 
 	void OnEnable () {
 		Undo.undoRedoPerformed += UndoRedoPerformed;
+		Undo.willFlushUndoRecord += WillFlushUndoRecord;
 	}
 
 	void OnDisable () {
 		Undo.undoRedoPerformed -= UndoRedoPerformed;
+		Undo.willFlushUndoRecord -= WillFlushUndoRecord;
 	}
 
-	void UndoRedoPerformed () {
-		Debug.Log("HERE");
+	void UndoRedoPerformed () { 
+		tileMap.UpdateMesh();
+	}
+
+	void WillFlushUndoRecord () {
 	}
 
 	private Rect textureRect;
 	public override void OnInspectorGUI() {
+		Event e = Event.current;
+		
 		EditorGUI.BeginChangeCheck();
 		int mapWidth = EditorGUILayout.IntField("Map Width", tileMap.width);
 		int mapHeight = EditorGUILayout.IntField("Map Height", tileMap.height);
-		if (mapWidth < 1) mapWidth = 1;
-		if (mapHeight < 1) mapHeight = 1;
 		if (EditorGUI.EndChangeCheck()) {
-			Undo.RecordObject(target, "Changed map size");
-			tileMap.width = mapWidth;
-			tileMap.height = mapHeight;
-			tileMap.Setup();
+			Undo.RecordObject(target, "resize map");
+			tileMap.ResizeTileArray(mapWidth, mapHeight);
+			tileMap.UpdateMesh();
 		}
 
 		base.OnInspectorGUI();
 
 		if (tileMap.texture == null) return;
-
-		Event e = Event.current;
 
 		float w = Screen.width - 40;
 		float h = w * tileMap.texture.height / tileMap.texture.width;
@@ -77,38 +79,28 @@ public class TileMapEditor : Editor {
 		}
 	}
 
-	int undoGroup = -1;
 	void OnSceneGUI() {
 		Event e = Event.current;
 
 		if (!e.isMouse) return;
 
-		int id = GUIUtility.GetControlID(FocusType.Passive);
-
 		Vector3 pos = MouseToWorld();
 		int x = (int)pos.x;
 		int y = (int)pos.y;
-		if (x >= 0 && x < tileMap.width && y >= 0 && y < tileMap.height) {
-			if (e.type == EventType.MouseDown || e.type == EventType.MouseDrag) {
-				if (e.type == EventType.MouseDown) {
-					Undo.IncrementCurrentGroup();
-					undoGroup = Undo.GetCurrentGroup();
-				}
-				Undo.RecordObject(target, "Sets tilemap");
-				if (e.button == 0) {
-					tileMap.SetTile(x, y, tile + 1);
-				}
-				else if (e.button == 1) {
-					tileMap.SetTile(x, y, 0);
-				}
+		bool paintEvent = (e.button < 2) && (e.type == EventType.MouseDown || e.type == EventType.MouseDrag);
+		if (paintEvent && x >= 0 && x < tileMap.width && y >= 0 && y < tileMap.height) {
+			if (e.type == EventType.MouseDown) GUIUtility.hotControl = GUIUtility.GetControlID(FocusType.Passive);
+			Undo.RecordObject(target, "resize map");
+			if (e.button == 0) {
+				tileMap.SetTile(x, y, tile + 1);
+			}
+			else if (e.button == 1) {
+				tileMap.SetTile(x, y, 0);
 			}
 			e.Use();
-			GUIUtility.hotControl = id;
 		}
-		if (e.type == EventType.MouseUp) {
-			if (undoGroup > -1)	Undo.CollapseUndoOperations(undoGroup);
-			undoGroup = -1;
-		}
+		
+		if (e.type == EventType.MouseUp) GUIUtility.hotControl = 0;
 	}
 
 	Vector3 MouseToWorld () {

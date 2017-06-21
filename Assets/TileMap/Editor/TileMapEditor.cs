@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System;
+using ClipperLib;
 
 [CustomEditor(typeof(TileMap))]
 public class TileMapEditor : Editor {
@@ -15,19 +16,14 @@ public class TileMapEditor : Editor {
 
 	void OnEnable () {
 		Undo.undoRedoPerformed += UndoRedoPerformed;
-		Undo.willFlushUndoRecord += WillFlushUndoRecord;
 	}
 
 	void OnDisable () {
 		Undo.undoRedoPerformed -= UndoRedoPerformed;
-		Undo.willFlushUndoRecord -= WillFlushUndoRecord;
 	}
 
 	void UndoRedoPerformed () { 
 		tileMap.UpdateMesh();
-	}
-
-	void WillFlushUndoRecord () {
 	}
 
 	private Rect textureRect;
@@ -114,4 +110,40 @@ public class TileMapEditor : Editor {
 		return Vector3.zero;
 	}
 
+	public override bool HasPreviewGUI() {
+		return true;
+	}
+
+	public override GUIContent GetPreviewTitle () {
+		return new GUIContent("Collision Editor");
+	}
+
+	public override void OnPreviewGUI(Rect r, GUIStyle background) {
+		Vector2[] uvs = tileMap.GetUVs(tile);
+		Vector2 size = uvs[2] - uvs[0];
+		Rect uvRect = new Rect(uvs[0].x, uvs[0].y, size.x, size.y);
+		float width = tileMap.texture.width * size.x;
+		float height = tileMap.texture.height * size.y;
+		r.x += (Screen.width - width) * 0.5f;
+		r.y += (r.height - height) * 0.5f;
+		r.width = width;
+		r.height = height;
+		GUI.DrawTextureWithTexCoords(r, tileMap.texture, uvRect, true);
+
+		List<Vector2> points = tileMap.GetPolygon(tile);
+		if(points == null) return;
+		//tileMap.InitPolygons();
+
+		Vector3[] path = new Vector3[points.Count];
+		for(int i = 0; i < path.Length-1; i++){
+			path[i] = new Vector3(
+				r.x + points[i].x, 
+				r.y + tileMap.tileHeight - points[i].y, 
+				0);	
+		}
+		path[path.Length - 1] = path[0];
+
+		Handles.DrawPolyLine(path);
+		HandleUtility.Repaint();
+	}
 }

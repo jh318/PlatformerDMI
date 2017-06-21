@@ -17,6 +17,7 @@ public class TileMap : MonoBehaviour {
     public int tileSpacing = 0;
 
 	[HideInInspector] public int[] tileArray;
+	public List<Vector2>[] polygonArray;
 
 	public int columns {
 		get { 
@@ -30,6 +31,22 @@ public class TileMap : MonoBehaviour {
 			if (texture == null || tileHeight == 0) return 1;
 			return texture.height / tileHeight; 
 		}
+	}
+
+	[ContextMenu("InitPolygons")]
+	public void InitPolygons () {
+		polygonArray = new List<Vector2>[rows * columns];
+		polygonArray[0] = new List<Vector2>(new Vector2[] {
+			new Vector2(0,0),
+			new Vector2(0, 30),
+			new Vector2(45, 30)
+		});
+	}
+
+	public List<Vector2> GetPolygon(int tile){
+		if(polygonArray == null) return null;
+
+		return polygonArray[tile];
 	}
 
 	public void ResizeTileArray (int w, int h) {
@@ -90,7 +107,7 @@ public class TileMap : MonoBehaviour {
         for (int x = 0; x < width; x++) {
         	for (int y = 0; y < height; y++) {
                 int tile = tileArray[x + y * width];
-        		if (tile == 0) continue;
+        		if (tile <= 0) continue;
 
         		Vector3 pos = new Vector3(x, y, 0);
         		verts.AddRange(new Vector3[] {
@@ -100,12 +117,15 @@ public class TileMap : MonoBehaviour {
         			pos + Vector3.right
         		});
 
-				List<IntPoint> points = new List<IntPoint>();
-				points.Add(new IntPoint(x,   y));
-				points.Add(new IntPoint(x,   y+1));
-				points.Add(new IntPoint(x+1, y+1));
-				points.Add(new IntPoint(x+1, y));
-				paths.Add(points);
+				List<Vector2> poly = GetPolygon(tile-1);
+				if (poly != null && poly.Count > 0) {
+					List<IntPoint> points = new List<IntPoint>();
+					for (int i = 0; i < poly.Count; i++) {
+						Vector2 pt = poly[i];
+						points.Add(new IntPoint(x * tileWidth + pt.x, y * tileHeight + pt.y));
+					}
+					paths.Add(points);
+				}
 
         		norms.AddRange(new Vector3[] {
         			Vector3.back,
@@ -149,7 +169,10 @@ public class TileMap : MonoBehaviour {
 			List<IntPoint> path = RemoveColinear(paths[i]);
 			Vector2[] points = new Vector2[path.Count];
 			for (int j = 0; j < points.Length; j++) {
-				points[j] = new Vector2(path[j].X, path[j].Y);
+				points[j] = new Vector2(
+					(float)path[j].X / (float)tileWidth, 
+					(float)path[j].Y / (float)tileHeight
+				);
 			}
 			polygon.SetPath(i, points);
 		}

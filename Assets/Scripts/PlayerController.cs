@@ -19,6 +19,12 @@ public class PlayerController : MonoBehaviour {
 	float previousVerticalInput;
 	float previousHorizontalInput;
 
+	//ActionChecks
+	bool attacking = false;
+	bool slashChain1 = false;
+	bool slashChain2 = false;
+
+
 	public bool isGrounded {
 		get { return ground.Count > 0; }
 	}
@@ -36,6 +42,7 @@ public class PlayerController : MonoBehaviour {
 		FlipSprite ();
 		SetVelocity ();
 		SetAnimations ();
+		InputCheck();
 
 
 
@@ -99,6 +106,71 @@ public class PlayerController : MonoBehaviour {
 		if (ground.Contains(c.gameObject)) {
 			ground.Remove(c.gameObject);
 		}
+	}
+
+	void InputCheck(){
+		if(Input.GetButtonDown("SlashButton") && !attacking){
+			attacking = true;
+			StartCoroutine("Slash1");
+		}
+		if(Input.GetButton("SlashButton") && slashChain1){
+			StopCoroutine("Slash1");
+			StartCoroutine("Slash2");
+		}
+		if(Input.GetButtonDown("SlashButton") && slashChain2){
+			StopCoroutine("Slash2");
+			StartCoroutine("Slash3");
+		}
+	}
+
+	//Actions and Attacking
+	IEnumerator Slash1(){
+		anim.Play("Slash1");
+		yield return new WaitForSeconds(0.15f);
+		//activehitbox
+		yield return new WaitForSeconds(0.15f);
+		//Disablehitbox
+		//Check for Chain/Cancel
+		slashChain1 = true;
+		yield return new WaitForSeconds(0.4f); //Recovery 1
+		//Extra Time to Chain/Cancel
+		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
+		slashChain1 = false;
+		attacking = false;
+		anim.Play("MegaMan_Idle");
+	}
+
+	IEnumerator Slash2(){
+		slashChain1 = false;
+		anim.Play("Slash2");
+		yield return new WaitForSeconds(0.2f);
+		//activehitbox
+		yield return new WaitForSeconds(0.2f);
+		//Disablehitbox
+		slashChain2 = true;
+		yield return new WaitForSeconds(0.4f);
+
+		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
+		slashChain2 = false;
+		attacking = false;
+		anim.Play("MegaMan_Idle");
+	}
+
+	IEnumerator Slash3(){
+		slashChain2 = false;
+		anim.Play("Slash3");
+		yield return new WaitForSeconds(0.1f);
+		//activehitbox
+		yield return new WaitForSeconds(0.1f);
+		//Disablehitbox
+		//Check for Chain/Cancel
+		slashChain1 = true;
+		yield return new WaitForSeconds(0.4f); //Recovery 1
+		//Extra Time to Chain/Cancel
+		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
+		slashChain1 = false;
+		attacking = false;
+		anim.Play("MegaMan_Idle");
 	}
 }
 

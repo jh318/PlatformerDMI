@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicCameraController : MonoBehaviour {
 
-	public GameObject player;
+	public GameObject target;
 	public Vector3 offset = new Vector3(0,0,-10);
 	public float xLookAhead = 5.0f;
 	public float facingExtensionRateX = 8.0f;
@@ -25,17 +25,17 @@ public class BasicCameraController : MonoBehaviour {
 		movingOffsetX = Mathf.Clamp (movingOffsetX, -maxOffsetX, maxOffsetX);
 		movingOffsetY = Mathf.Clamp (movingOffsetY, -maxOffsetY, maxOffsetY);
 
-		Vector3 camPos = player.transform.position + new Vector3 (movingOffsetX, movingOffsetY, 0);
+		Vector3 camPos = target.transform.position + new Vector3 (movingOffsetX, movingOffsetY, 0);
 		camPos.z = transform.position.z;
 
 		transform.position = camPos;
 	}
 
 	void OffsetCameraToMovementX(){
-		if (player.GetComponent<Rigidbody2D> ().velocity.x > 0.1f) {
+		if (target.GetComponent<Rigidbody2D> ().velocity.x > 0.1f) {
 			movingOffsetX += facingExtensionRateX * Time.deltaTime;
 		} 
-		else if (player.GetComponent<Rigidbody2D> ().velocity.x < -0.1f) {
+		else if (target.GetComponent<Rigidbody2D> ().velocity.x < -0.1f) {
 			movingOffsetX -= facingExtensionRateX * Time.deltaTime;
 		} 
 		else {
@@ -44,10 +44,10 @@ public class BasicCameraController : MonoBehaviour {
 	}
 
 	void OffsetCameraToMovementY(){
-		if (player.GetComponent<Rigidbody2D> ().velocity.y > 0.1f) {
+		if (target.GetComponent<Rigidbody2D> ().velocity.y > 0.1f) {
 			movingOffsetY += facingExtensionRateY * Time.deltaTime;
 		} 
-		else if (player.GetComponent<Rigidbody2D>().velocity.y < -0.1f) {
+		else if (target.GetComponent<Rigidbody2D>().velocity.y < -0.1f) {
 			movingOffsetY -= facingExtensionRateY * Time.deltaTime;
 		} 
 		else {

@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour {
 	public float speed = 5.0f;
 	public float jumpForce = 200.0f;
 	public int jumpCountMax = 2;
+	public BoxCollider2D hitbox;
+	public float launchForce = 10.0f;
 
 
 	Rigidbody2D body;
@@ -21,6 +23,7 @@ public class PlayerController : MonoBehaviour {
 	float previousVerticalInput;
 	float previousHorizontalInput;
 	float gravity;
+	HitboxController hitboxController;
 
 	//ActionChecks
 	bool attacking = false;
@@ -39,6 +42,8 @@ public class PlayerController : MonoBehaviour {
 		body = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		gravity = body.gravityScale;
+		hitbox.gameObject.SetActive(false);
+		hitboxController = hitbox.GetComponent<HitboxController>();
 	}
 
 	void Update(){
@@ -136,7 +141,6 @@ public class PlayerController : MonoBehaviour {
 
 		if(attacking){
 			StartCoroutine(FreezePosition());
-			Debug.Log("HERE");
 		}
 		
 	}
@@ -145,9 +149,10 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator Slash1(){
 		anim.Play("Slash1");
 		yield return new WaitForSeconds(0.15f);
-		//activehitbox
+		hitbox.gameObject.SetActive(true);
+		HitStun(1.0f);
 		yield return new WaitForSeconds(0.15f);
-		//Disablehitbox
+		hitbox.gameObject.SetActive(false);		
 		//Check for Chain/Cancel
 		slashChain1 = true;
 		yield return new WaitForSeconds(0.4f); //Recovery 1
@@ -162,9 +167,11 @@ public class PlayerController : MonoBehaviour {
 		slashChain1 = false;
 		anim.Play("Slash2");
 		yield return new WaitForSeconds(0.2f);
-		//activehitbox
+		hitbox.gameObject.SetActive(true);
+		HitStun(1.0f);
 		yield return new WaitForSeconds(0.2f);
-		//Disablehitbox
+		hitbox.gameObject.SetActive(false);		
+		//Check for Chain/Cancel
 		slashChain2 = true;
 		yield return new WaitForSeconds(0.4f);
 
@@ -178,9 +185,10 @@ public class PlayerController : MonoBehaviour {
 		slashChain2 = false;
 		anim.Play("Slash3");
 		yield return new WaitForSeconds(0.1f);
-		//activehitbox
+		hitbox.gameObject.SetActive(true);
+		HitStun(1.0f);
 		yield return new WaitForSeconds(0.1f);
-		//Disablehitbox
+		hitbox.gameObject.SetActive(false);		
 		//Check for Chain/Cancel
 		slashChain1 = true;
 		yield return new WaitForSeconds(0.4f); //Recovery 1
@@ -194,14 +202,15 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator Launcher(){
 		anim.Play("Launcher");
 		yield return new WaitForSeconds(0.1f);
-		//activehitbox
+		hitbox.gameObject.SetActive(true);
+		Launch();
 		yield return new WaitForSeconds(0.1f);
-		//Disablehitbox
+		hitbox.gameObject.SetActive(false);		
 		//Check for Chain/Cancel
 		slashChain1 = true;
-		yield return new WaitForSeconds(0.4f); //Recovery 1
+		yield return new WaitForSeconds(0.1f); //Recovery 1
 		//Extra Time to Chain/Cancel
-		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
+		yield return new WaitForSeconds(0.1f); //Recovery 2 Final
 		attacking = false;
 		anim.Play("Neutral");
 	}
@@ -214,5 +223,31 @@ public class PlayerController : MonoBehaviour {
 		}
 		body.gravityScale = gravity;
 	}
+
+	//Special Properties
+	void Launch(){
+		if(hitboxController.EnemyHit){
+			Debug.Log("TOBE");
+			GameObject enemy = hitboxController.EnemyObject;
+			Rigidbody2D enemyBody = enemy.GetComponent<Rigidbody2D>();
+			//enemyBody.AddForce(transform.up * launchForce);
+			enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(0, launchForce);
+			//enemy.GetComponent<Rigidbody2D>().AddForce(transform.up * launchForce);
+
+			hitboxController.EnemyHit = false;
+		}
+	}
+
+	void HitStun(float duration){
+		if(hitboxController.EnemyHit){
+			GameObject enemy = hitboxController.EnemyObject;
+			EnemyController enemyController = enemy.GetComponent<EnemyController>();
+			
+			StartCoroutine(enemyController.SetHitStun(duration));
+
+		}
+	}
 }
+
+
 

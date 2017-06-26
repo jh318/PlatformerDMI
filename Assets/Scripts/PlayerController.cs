@@ -13,11 +13,14 @@ public class PlayerController : MonoBehaviour {
 	Animator anim;
 
 	List<GameObject> ground = new List<GameObject>();
+	enum State{ground, air};
+	State playerState;
 	int jumpCount = 0;
 	float horizontalInput;
 	float verticalInput;
 	float previousVerticalInput;
 	float previousHorizontalInput;
+	float gravity;
 
 	//ActionChecks
 	bool attacking = false;
@@ -35,6 +38,7 @@ public class PlayerController : MonoBehaviour {
 	void Start(){
 		body = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		gravity = body.gravityScale;
 	}
 
 	void Update(){
@@ -97,6 +101,7 @@ public class PlayerController : MonoBehaviour {
 			if (Vector2.Angle (cp.normal, Vector2.up) < 45) {
 				ground.Add(c.gameObject);
 				jumpCount = 0;
+				playerState = State.ground;
 				return;
 			}
 		}
@@ -109,6 +114,10 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	void InputCheck(){
+		if(verticalInput > 0.5f ){
+			playerState = State.air;
+		}
+
 		if(Input.GetButtonDown("SlashButton") && !attacking){
 			attacking = true;
 			StartCoroutine("Slash1");
@@ -121,6 +130,15 @@ public class PlayerController : MonoBehaviour {
 			StopCoroutine("Slash2");
 			StartCoroutine("Slash3");
 		}
+		if(Input.GetButtonDown("LauncherButton") && !attacking){
+			StartCoroutine("Launcher");
+		}
+
+		if(attacking){
+			StartCoroutine(FreezePosition());
+			Debug.Log("HERE");
+		}
+		
 	}
 
 	//Actions and Attacking
@@ -137,7 +155,7 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
 		slashChain1 = false;
 		attacking = false;
-		anim.Play("MegaMan_Idle");
+		anim.Play("Neutral");
 	}
 
 	IEnumerator Slash2(){
@@ -153,7 +171,7 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
 		slashChain2 = false;
 		attacking = false;
-		anim.Play("MegaMan_Idle");
+		anim.Play("Neutral");
 	}
 
 	IEnumerator Slash3(){
@@ -170,7 +188,31 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
 		slashChain1 = false;
 		attacking = false;
-		anim.Play("MegaMan_Idle");
+		anim.Play("Neutral");
+	}
+
+	IEnumerator Launcher(){
+		anim.Play("Launcher");
+		yield return new WaitForSeconds(0.1f);
+		//activehitbox
+		yield return new WaitForSeconds(0.1f);
+		//Disablehitbox
+		//Check for Chain/Cancel
+		slashChain1 = true;
+		yield return new WaitForSeconds(0.4f); //Recovery 1
+		//Extra Time to Chain/Cancel
+		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
+		attacking = false;
+		anim.Play("Neutral");
+	}
+
+	IEnumerator FreezePosition(){
+		while(attacking){
+			body.velocity = new Vector2(0,0);
+			body.gravityScale = 0;
+			yield return new WaitForEndOfFrame();
+		}
+		body.gravityScale = gravity;
 	}
 }
 

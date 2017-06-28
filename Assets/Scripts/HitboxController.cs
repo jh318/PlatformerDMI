@@ -49,16 +49,17 @@ public class HitboxController : MonoBehaviour {
 	// }
 
 	public void OnTriggerEnter2D(Collider2D c){
-		targets.Add(c.gameObject);
-
-		for(int i = 0; i < targets.Count; i++){
-			GameObject target = targets[i];
-			if(!c.gameObject.GetComponent<SpecialProperties>()){
-				targets.Remove(target);
-			}
+		if(c.gameObject.GetComponent<SpecialProperties>()) {
+			targets.Add(c.gameObject);
 		}
+
+		if(targets.Count == 0) Debug.Log("Enemy miss");
+
 		parentProperties.Targets = targets;
 	}
 
-
+	void OnDisable(){
+		targets.Clear();
+		parentProperties.Targets.Clear();
+	}
 }

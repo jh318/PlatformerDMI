@@ -7,28 +7,14 @@ public class SpecialProperties : MonoBehaviour {
 	
 	//Common Components
 	Rigidbody2D body;
-	// HitboxController hitbox; //Need a box trigger on a child object with this script
 	
 	//Common Variables
 	bool hitStun = false;
 	float gravity;
-	float launchHeight;
+	float launchHeight = 3;
 	GameObject target;
 	List<GameObject> targets = new List<GameObject>();
 
-
-	//Trying to decouple
-	// public SpecialProperties EnemyProperties{ 
-	// 	get {
-	// 		if(hitbox.EnemyObject != null){
-	// 			Debug.Log("GotEnemy");
-	// 			return hitbox.EnemyObject.GetComponentInParent<SpecialProperties>();
-	// 		}
-				
-	// 		else
-	// 			return null;
-	// 	}
-	// }
 
 	//Probably the way to go
 	public GameObject Target{
@@ -49,11 +35,6 @@ public class SpecialProperties : MonoBehaviour {
 			}
 	}
 
-	//Brainstorming
-	public SpecialProperties TargetProperties{ 
-		get {return target.GetComponent<SpecialProperties>();}
-	}
-
 	public List<GameObject> Targets{
 		get{return targets;}
 		set{targets = value;}
@@ -61,9 +42,8 @@ public class SpecialProperties : MonoBehaviour {
 
 	void Start(){
 		body = GetComponent<Rigidbody2D>();
-		//hitbox = GetComponentInChildren<HitboxController>();
 		gravity = body.gravityScale;
-
+		launchHeight = 3;
 		
 	}
 
@@ -75,11 +55,6 @@ public class SpecialProperties : MonoBehaviour {
 		return Mathf.Sqrt(2 * unitHeight * Mathf.Abs(Physics2D.gravity.y) * body.gravityScale);
 	}
 
-	public void GetRigidBodies(List<GameObject> targetList){
-		for(int i = 0; i < targetList.Count; i++){
-			targetList[i].GetComponentInParent<SpecialProperties>();
-		}
-	}
 
 	//Special Properties
 	public IEnumerator SetHitStun(float duration, bool freezeVelocity = true){
@@ -91,17 +66,15 @@ public class SpecialProperties : MonoBehaviour {
 	}
 
 	public IEnumerator SetFreezeVelocity(){
-		Debug.Log("FROZEN");
 		while(hitStun){
 			body.velocity = new Vector2(0,0);
 			body.gravityScale = 0;
 			yield return new WaitForEndOfFrame();
 		}
-		Debug.Log("DONE");
 		body.gravityScale = gravity;
 	}
 
-	void Launch(){
+	public void Launch(){
 		body.velocity = new Vector2(0, LaunchUnitHeight(launchHeight));		
 	}
 

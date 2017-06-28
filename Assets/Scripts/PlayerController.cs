@@ -157,14 +157,13 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(0.15f);
 		hitbox1.gameObject.SetActive(true);
 		//HitStun(1.0f);
-		
-		foreach (GameObject target in sProperties.Targets) {
-			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(5.0f));
-		}
-		
 			//sProperties.Target.SetHitStun(1.0f);
 		yield return new WaitForSeconds(0.15f);
-		hitbox1.gameObject.SetActive(false);		
+		foreach (GameObject target in sProperties.Targets) {
+			Debug.Log(target.name);
+			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(5.0f));
+		}
+		hitbox1.gameObject.SetActive(false);
 		//Check for Chain/Cancel
 		slashChain1 = true;
 		yield return new WaitForSeconds(0.4f); //Recovery 1
@@ -216,8 +215,13 @@ public class PlayerController : MonoBehaviour {
 		anim.Play("Launcher");
 		yield return new WaitForSeconds(0.1f);
 		hitbox1.gameObject.SetActive(true);
-		Launch();
 		yield return new WaitForSeconds(0.1f);
+		if(sProperties.Targets.Count > 0){
+			Debug.Log("Launch");
+			foreach (GameObject target in sProperties.Targets) {
+			target.GetComponent<SpecialProperties>().Launch();
+			}
+		}
 		hitbox1.gameObject.SetActive(false);		
 		//Check for Chain/Cancel
 		slashChain1 = true;

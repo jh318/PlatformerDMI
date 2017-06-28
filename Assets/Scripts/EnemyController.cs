@@ -14,8 +14,9 @@ public class EnemyController : MonoBehaviour {
 		gravity = body.gravityScale;
 	}
 
-
-
+	void Update(){
+		body.velocity = new Vector3(1,0,0);
+	}
 
 	//Collision
 	void OnTriggerEnter2D(Collider2D c){

@@ -15,7 +15,12 @@ public class HitboxController : MonoBehaviour {
 		set {enemyHit = value;  }
 	}
 	public GameObject EnemyObject{
-		get {return enemyObject; }
+		get {
+			if(enemyObject != null)
+				return enemyObject;
+			else
+				return null;
+		}
 		set {enemyObject = value; }
 	}
 
@@ -30,14 +35,11 @@ public class HitboxController : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D c){
 		if(c.gameObject.GetComponentInParent<SpecialProperties>()){
-			enemyProperties = c.gameObject.GetComponentInParent<SpecialProperties>();
+			Debug.Log("Enemy with SProperties Hit");
+			//enemyProperties = c.gameObject.GetComponentInParent<SpecialProperties>();
 			enemyObject = c.gameObject;
 			enemyHit = true;
-		}
-		else{
-			enemyProperties = null;
-			enemyObject = null;
-			enemyHit = false;
+			//parentProperties.EnemyObject(enemyObject);
 		}
 	}
 

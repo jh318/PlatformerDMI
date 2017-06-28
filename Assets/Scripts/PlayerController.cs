@@ -155,8 +155,8 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(0.15f);
 		hitbox1.gameObject.SetActive(true);
 		//HitStun(1.0f);
-		if(sProperties.EnemyObject != null)
-			sProperties.EnemyObject.SetHitStun(1.0f);
+		if(sProperties.EnemyProperties != null)
+			sProperties.EnemyProperties.SetHitStun(1.0f);
 		yield return new WaitForSeconds(0.15f);
 		hitbox1.gameObject.SetActive(false);		
 		//Check for Chain/Cancel

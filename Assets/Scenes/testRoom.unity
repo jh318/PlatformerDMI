@@ -1643,16 +1643,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114155609625953070, guid: 03b534f98758c3d40a284074fce58148,
-        type: 2}
-      propertyPath: hitbox1
-      value: 
-      objectReference: {fileID: 1958014354}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03b534f98758c3d40a284074fce58148, type: 2}
   m_IsPrefabParent: 0
---- !u!61 &1958014354 stripped
-BoxCollider2D:
-  m_PrefabParentObject: {fileID: 61139726263740580, guid: 03b534f98758c3d40a284074fce58148,
-    type: 2}
-  m_PrefabInternal: {fileID: 1913314145}

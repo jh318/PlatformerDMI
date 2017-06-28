@@ -144,6 +144,8 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		if(attacking){
+			//sProperties.Target = this.gameObject;
+			//StartCoroutine(sProperties.SetFreezeVelocity());
 			StartCoroutine(FreezePosition());
 		}
 		
@@ -155,8 +157,9 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(0.15f);
 		hitbox1.gameObject.SetActive(true);
 		//HitStun(1.0f);
-		if(sProperties.EnemyProperties != null)
-			sProperties.EnemyProperties.SetHitStun(1.0f);
+		if(sProperties.Target != null && sProperties.TargetProperties != null)
+			sProperties.SetHitStun(5.0f);
+			//sProperties.Target.SetHitStun(1.0f);
 		yield return new WaitForSeconds(0.15f);
 		hitbox1.gameObject.SetActive(false);		
 		//Check for Chain/Cancel

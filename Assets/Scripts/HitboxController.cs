@@ -39,6 +39,7 @@ public class HitboxController : MonoBehaviour {
 			//enemyProperties = c.gameObject.GetComponentInParent<SpecialProperties>();
 			enemyObject = c.gameObject;
 			enemyHit = true;
+			parentProperties.Target = c.gameObject;
 			//parentProperties.EnemyObject(enemyObject);
 		}
 	}

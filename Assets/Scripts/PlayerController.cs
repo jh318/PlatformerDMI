@@ -157,8 +157,11 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(0.15f);
 		hitbox1.gameObject.SetActive(true);
 		//HitStun(1.0f);
-		if(sProperties.Target != null && sProperties.TargetProperties != null)
-			sProperties.SetHitStun(5.0f);
+		
+		foreach (GameObject target in sProperties.Targets) {
+			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(5.0f));
+		}
+		
 			//sProperties.Target.SetHitStun(1.0f);
 		yield return new WaitForSeconds(0.15f);
 		hitbox1.gameObject.SetActive(false);		

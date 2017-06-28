@@ -8,6 +8,7 @@ public class HitboxController : MonoBehaviour {
 	GameObject enemyObject;
 	SpecialProperties enemyProperties; //Requires script on enemy
 	SpecialProperties parentProperties; //Requires script on root
+	List<GameObject> targets = new List<GameObject>();
 	bool enemyHit = false;
 
 	public bool EnemyHit{
@@ -33,15 +34,30 @@ public class HitboxController : MonoBehaviour {
 		parentProperties = GetComponentInParent<SpecialProperties>();
 	}
 
+	// public void OnTriggerEnter2D(Collider2D c){
+
+	// 	targets.Add(c.gameObject);
+
+	// 	if(c.gameObject.GetComponentInParent<SpecialProperties>()){
+	// 		Debug.Log("Enemy with SProperties Hit");
+	// 		//enemyProperties = c.gameObject.GetComponentInParent<SpecialProperties>();
+	// 		enemyObject = c.gameObject;
+	// 		enemyHit = true;
+	// 		parentProperties.Target = c.gameObject;
+	// 		//parentProperties.EnemyObject(enemyObject);
+	// 	}
+	// }
+
 	public void OnTriggerEnter2D(Collider2D c){
-		if(c.gameObject.GetComponentInParent<SpecialProperties>()){
-			Debug.Log("Enemy with SProperties Hit");
-			//enemyProperties = c.gameObject.GetComponentInParent<SpecialProperties>();
-			enemyObject = c.gameObject;
-			enemyHit = true;
-			parentProperties.Target = c.gameObject;
-			//parentProperties.EnemyObject(enemyObject);
+		targets.Add(c.gameObject);
+
+		for(int i = 0; i < targets.Count; i++){
+			GameObject target = targets[i];
+			if(!c.gameObject.GetComponent<SpecialProperties>()){
+				targets.Remove(target);
+			}
 		}
+		parentProperties.Targets = targets;
 	}
 
 

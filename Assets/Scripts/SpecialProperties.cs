@@ -14,7 +14,7 @@ public class SpecialProperties : MonoBehaviour {
 	float gravity;
 	float launchHeight;
 	GameObject target;
-	Rigidbody2D targetBody;
+	List<GameObject> targets = new List<GameObject>();
 
 
 	//Trying to decouple
@@ -54,11 +54,16 @@ public class SpecialProperties : MonoBehaviour {
 		get {return target.GetComponent<SpecialProperties>();}
 	}
 
+	public List<GameObject> Targets{
+		get{return targets;}
+		set{targets = value;}
+	}
+
 	void Start(){
-		body = GetComponent<Rigidbody2D> ();
-		targetBody = GetComponent<Rigidbody2D>();
+		body = GetComponent<Rigidbody2D>();
 		//hitbox = GetComponentInChildren<HitboxController>();
 		gravity = body.gravityScale;
+
 		
 	}
 
@@ -67,7 +72,13 @@ public class SpecialProperties : MonoBehaviour {
 
 	//Common Calculations
 	public float LaunchUnitHeight(float unitHeight){
-		return Mathf.Sqrt(2 * unitHeight * Mathf.Abs(Physics2D.gravity.y) * targetBody.gravityScale);
+		return Mathf.Sqrt(2 * unitHeight * Mathf.Abs(Physics2D.gravity.y) * body.gravityScale);
+	}
+
+	public void GetRigidBodies(List<GameObject> targetList){
+		for(int i = 0; i < targetList.Count; i++){
+			targetList[i].GetComponentInParent<SpecialProperties>();
+		}
 	}
 
 	//Special Properties
@@ -82,15 +93,16 @@ public class SpecialProperties : MonoBehaviour {
 	public IEnumerator SetFreezeVelocity(){
 		Debug.Log("FROZEN");
 		while(hitStun){
-			targetBody.velocity = new Vector2(0,0);
-			targetBody.gravityScale = 0;
+			body.velocity = new Vector2(0,0);
+			body.gravityScale = 0;
 			yield return new WaitForEndOfFrame();
 		}
-		targetBody.gravityScale = gravity;
+		Debug.Log("DONE");
+		body.gravityScale = gravity;
 	}
 
 	void Launch(){
-		targetBody.velocity = new Vector2(0, LaunchUnitHeight(launchHeight));		
+		body.velocity = new Vector2(0, LaunchUnitHeight(launchHeight));		
 	}
 
 	public IEnumerator SetKnockBack(float xVelocity, float yVelocity, float duration){

@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour {
 	public int jumpCountMax = 2;
 	public BoxCollider2D hitbox;
 	public float launchForce = 10.0f;
+	public float jumpHeight = 2;
+	public float launchHeight = 2;
 
 
 	Rigidbody2D body;
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour {
 	float previousHorizontalInput;
 	float gravity;
 	HitboxController hitboxController;
+	//Vector2 v;
 
 	//ActionChecks
 	bool attacking = false;
@@ -79,7 +82,7 @@ public class PlayerController : MonoBehaviour {
 
 		if (canJump && (isGrounded || jumpCount < jumpCountMax)) {
 			jumpCount++;
-			body.velocity = new Vector2(body.velocity.x, jumpForce);
+			body.velocity = new Vector2(body.velocity.x, JumpVelocity(jumpHeight));
 		}
 	}
 		
@@ -116,6 +119,10 @@ public class PlayerController : MonoBehaviour {
 		if (ground.Contains(c.gameObject)) {
 			ground.Remove(c.gameObject);
 		}
+	}
+
+	public float JumpVelocity(float height){
+		return Mathf.Sqrt(2 * height * Mathf.Abs(Physics2D.gravity.y) * body.gravityScale);
 	}
 
 	void InputCheck(){
@@ -227,12 +234,8 @@ public class PlayerController : MonoBehaviour {
 	//Special Properties
 	void Launch(){
 		if(hitboxController.EnemyHit){
-			Debug.Log("TOBE");
 			GameObject enemy = hitboxController.EnemyObject;
-			Rigidbody2D enemyBody = enemy.GetComponent<Rigidbody2D>();
-			//enemyBody.AddForce(transform.up * launchForce);
-			enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(0, launchForce);
-			//enemy.GetComponent<Rigidbody2D>().AddForce(transform.up * launchForce);
+			enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(0, JumpVelocity(launchHeight));
 
 			hitboxController.EnemyHit = false;
 		}
@@ -241,9 +244,8 @@ public class PlayerController : MonoBehaviour {
 	void HitStun(float duration){
 		if(hitboxController.EnemyHit){
 			GameObject enemy = hitboxController.EnemyObject;
-			EnemyController enemyController = enemy.GetComponent<EnemyController>();
 			
-			StartCoroutine(enemyController.SetHitStun(duration));
+			StartCoroutine(enemy.GetComponent<enemyController>().SetHitStun(duration));
 
 		}
 	}

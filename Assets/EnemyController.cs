@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-	
 	Rigidbody2D body;
-	float gravity;
 
+	float gravity;
 	bool hitStun = false;
 
 	void Start(){
@@ -15,21 +14,17 @@ public class EnemyController : MonoBehaviour {
 		gravity = body.gravityScale;
 	}
 
-	void Update(){
 
-	}
 
+
+	//Collision
 	void OnTriggerEnter2D(Collider2D c){
-		if(c.gameObject.tag == "PlayerHitbox"){
-			//StartCoroutine(SetHitStun(1.0f));
-		}
 		if(hitStun){
 			StartCoroutine("FreezePosition");
 		}
 	}
 
-	//
-
+	//Special Properties
 	public IEnumerator FreezePosition(){
 			while(hitStun){
 				body.velocity = new Vector2(0,0);
@@ -43,5 +38,9 @@ public class EnemyController : MonoBehaviour {
 		hitStun = true;
 		yield return new WaitForSeconds(duration);
 		hitStun = false;
+	}
+
+	public IEnumerator SetKnockBack(float distance){
+		yield return new WaitForEndOfFrame();
 	}
 }

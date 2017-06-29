@@ -34,26 +34,10 @@ public class HitboxController : MonoBehaviour {
 		parentProperties = GetComponentInParent<SpecialProperties>();
 	}
 
-	// public void OnTriggerEnter2D(Collider2D c){
-
-	// 	targets.Add(c.gameObject);
-
-	// 	if(c.gameObject.GetComponentInParent<SpecialProperties>()){
-	// 		Debug.Log("Enemy with SProperties Hit");
-	// 		//enemyProperties = c.gameObject.GetComponentInParent<SpecialProperties>();
-	// 		enemyObject = c.gameObject;
-	// 		enemyHit = true;
-	// 		parentProperties.Target = c.gameObject;
-	// 		//parentProperties.EnemyObject(enemyObject);
-	// 	}
-	// }
-
 	public void OnTriggerEnter2D(Collider2D c){
-		if(c.gameObject.GetComponent<SpecialProperties>()) {
+		if(c.gameObject.GetComponent<SpecialProperties>() && !targets.Contains(c.gameObject)) {
 			targets.Add(c.gameObject);
 		}
-
-		if(targets.Count == 0) Debug.Log("Enemy miss");
 
 		parentProperties.Targets = targets;
 	}

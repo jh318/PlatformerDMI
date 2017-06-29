@@ -154,21 +154,23 @@ public class PlayerController : MonoBehaviour {
 	//Actions and Attacking
 	IEnumerator Slash1(){
 		anim.Play("Slash1");
-		yield return new WaitForSeconds(0.15f);
+		//"StartUp"
 		hitbox1.gameObject.SetActive(true);
-		//HitStun(1.0f);
-			//sProperties.Target.SetHitStun(1.0f);
-		yield return new WaitForSeconds(0.15f);
+		yield return new WaitForEndOfFrame();
+		yield return new WaitForSeconds(0.02f);
+		 //"Active"
+		if (sProperties.Targets.Count == 0) Debug.Log("MISS, Slash1");
 		foreach (GameObject target in sProperties.Targets) {
-			Debug.Log(target.name);
-			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(5.0f));
+			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(1.00f));
 		}
 		hitbox1.gameObject.SetActive(false);
-		//Check for Chain/Cancel
-		slashChain1 = true;
-		yield return new WaitForSeconds(0.4f); //Recovery 1
-		//Extra Time to Chain/Cancel
-		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
+		yield return new WaitForEndOfFrame();
+
+		yield return new WaitForSeconds(0.05f); //"Active"
+		slashChain1 = true; 
+
+
+		yield return new WaitForSeconds(0.5f); //"Recovery"
 		slashChain1 = false;
 		attacking = false;
 		anim.Play("Neutral");
@@ -179,15 +181,18 @@ public class PlayerController : MonoBehaviour {
 		anim.Play("Slash2");
 		yield return new WaitForSeconds(0.2f);
 		hitbox1.gameObject.SetActive(true);
-		//HitStun(1.0f);
-
+		yield return new WaitForEndOfFrame();
 		yield return new WaitForSeconds(0.2f);
-		hitbox1.gameObject.SetActive(false);		
-		//Check for Chain/Cancel
-		slashChain2 = true;
-		yield return new WaitForSeconds(0.4f);
+		foreach (GameObject target in sProperties.Targets) {
+			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(1.0f));
+		}
+		hitbox1.gameObject.SetActive(false);
+		yield return new WaitForEndOfFrame();		
+		yield return new WaitForSeconds(0.1f);
+		slashChain2 = true;		//Check for Chain/Cancel
 
-		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
+		//Extra Cancel time
+		yield return new WaitForSeconds(0.1f); //Recovery 2 Final
 		slashChain2 = false;
 		attacking = false;
 		anim.Play("Neutral");
@@ -198,33 +203,33 @@ public class PlayerController : MonoBehaviour {
 		anim.Play("Slash3");
 		yield return new WaitForSeconds(0.1f);
 		hitbox1.gameObject.SetActive(true);
-		HitStun(1.0f);
+		yield return new WaitForEndOfFrame();
 		yield return new WaitForSeconds(0.1f);
-		hitbox1.gameObject.SetActive(false);		
-		//Check for Chain/Cancel
-		slashChain1 = true;
+		foreach (GameObject target in sProperties.Targets) {
+			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.0f));
+		}
+		hitbox1.gameObject.SetActive(false);
+		yield return new WaitForEndOfFrame();	
 		yield return new WaitForSeconds(0.4f); //Recovery 1
 		//Extra Time to Chain/Cancel
 		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
-		slashChain1 = false;
 		attacking = false;
 		anim.Play("Neutral");
 	}
 
 	IEnumerator Launcher(){
 		anim.Play("Launcher");
-		yield return new WaitForSeconds(0.1f);
 		hitbox1.gameObject.SetActive(true);
-		yield return new WaitForSeconds(0.1f);
+		yield return new WaitForEndOfFrame(); //Wait for OnEnable()
+		yield return new WaitForSeconds(0.1f); //Active
+		if (sProperties.Targets.Count == 0) Debug.Log("MISS, Launcher");
 		if(sProperties.Targets.Count > 0){
-			Debug.Log("Launch");
 			foreach (GameObject target in sProperties.Targets) {
 			target.GetComponent<SpecialProperties>().Launch();
 			}
 		}
-		hitbox1.gameObject.SetActive(false);		
-		//Check for Chain/Cancel
-		slashChain1 = true;
+		hitbox1.gameObject.SetActive(false); 
+		yield return new WaitForEndOfFrame();//Disable hitbox and Begin Recovery
 		yield return new WaitForSeconds(0.1f); //Recovery 1
 		//Extra Time to Chain/Cancel
 		yield return new WaitForSeconds(0.1f); //Recovery 2 Final
@@ -232,6 +237,7 @@ public class PlayerController : MonoBehaviour {
 		anim.Play("Neutral");
 	}
 
+	//Other Stuff
 	IEnumerator FreezePosition(){
 		while(attacking){
 			body.velocity = new Vector2(0,0);
@@ -240,26 +246,4 @@ public class PlayerController : MonoBehaviour {
 		}
 		body.gravityScale = gravity;
 	}
-
-	//Special Properties
-	void Launch(){
-		if(hitboxController.EnemyHit){
-			GameObject enemy = hitboxController.EnemyObject;
-			if(enemy.tag == "Enemy"){
-				enemy.GetComponent<Rigidbody2D>().velocity = new Vector2(0, JumpVelocity(launchHeight));
-				hitboxController.EnemyHit = false;
-			}
-		}
-	}
-
-	void HitStun(float duration){
-		if(hitboxController.EnemyHit){
-			GameObject enemy = hitboxController.EnemyObject;
-			if(enemy.tag == "Enemy")
-			StartCoroutine(enemy.GetComponent<EnemyController>().SetHitStun(duration));
-		}
-	}
 }
-
-
-

@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour {
 		 //"Active"
 		if (sProperties.Targets.Count == 0) Debug.Log("MISS, Slash1");
 		foreach (GameObject target in sProperties.Targets) {
-			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(1.00f));
+			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.1f));
 		}
 		hitbox1.gameObject.SetActive(false);
 		yield return new WaitForEndOfFrame();
@@ -179,12 +179,11 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator Slash2(){
 		slashChain1 = false;
 		anim.Play("Slash2");
-		yield return new WaitForSeconds(0.2f);
 		hitbox1.gameObject.SetActive(true);
 		yield return new WaitForEndOfFrame();
-		yield return new WaitForSeconds(0.2f);
+		yield return new WaitForSeconds(0.03f);
 		foreach (GameObject target in sProperties.Targets) {
-			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(1.0f));
+			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.09f));
 		}
 		hitbox1.gameObject.SetActive(false);
 		yield return new WaitForEndOfFrame();		
@@ -192,7 +191,7 @@ public class PlayerController : MonoBehaviour {
 		slashChain2 = true;		//Check for Chain/Cancel
 
 		//Extra Cancel time
-		yield return new WaitForSeconds(0.1f); //Recovery 2 Final
+		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
 		slashChain2 = false;
 		attacking = false;
 		anim.Play("Neutral");
@@ -201,12 +200,14 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator Slash3(){
 		slashChain2 = false;
 		anim.Play("Slash3");
-		yield return new WaitForSeconds(0.1f);
 		hitbox1.gameObject.SetActive(true);
 		yield return new WaitForEndOfFrame();
-		yield return new WaitForSeconds(0.1f);
-		foreach (GameObject target in sProperties.Targets) {
-			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.0f));
+		yield return new WaitForSeconds(0.03f);
+		// foreach (GameObject target in sProperties.Targets) {
+		// 	StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(1.0f));
+		// }
+		foreach(GameObject target in sProperties.Targets){
+			StartCoroutine(target.GetComponent<SpecialProperties>().SetKnockBack((5.0f)*transform.right.x,5.0f));
 		}
 		hitbox1.gameObject.SetActive(false);
 		yield return new WaitForEndOfFrame();	
@@ -225,7 +226,7 @@ public class PlayerController : MonoBehaviour {
 		if (sProperties.Targets.Count == 0) Debug.Log("MISS, Launcher");
 		if(sProperties.Targets.Count > 0){
 			foreach (GameObject target in sProperties.Targets) {
-			target.GetComponent<SpecialProperties>().Launch();
+			StartCoroutine(target.GetComponent<SpecialProperties>().Launcher());
 			}
 		}
 		hitbox1.gameObject.SetActive(false); 

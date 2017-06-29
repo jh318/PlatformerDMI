@@ -35,9 +35,9 @@ public class SpecialProperties : MonoBehaviour {
 	}
 
 	//Special Properties
-	public IEnumerator SetHitStun(float duration){
+	public IEnumerator SetHitStun(float duration, bool hitStunVelocity = true){
 		hitStun = true; 
-		if(duration > 0)
+		if(duration > 0 && hitStunVelocity)
 			StartCoroutine(HitStunVelocity());
 		yield return new WaitForSeconds(duration);
 		hitStun = false;
@@ -52,14 +52,30 @@ public class SpecialProperties : MonoBehaviour {
 		body.gravityScale = gravity;
 	}
 
-	public void Launch(){
-		body.velocity = new Vector2(0, LaunchUnitHeight(launchHeight));		
+	public IEnumerator Launcher(){
+		StartCoroutine(SetHitStun(1.0f, false));
+		yield return new WaitForEndOfFrame();
+		body.velocity = new Vector2(0, LaunchUnitHeight(launchHeight));
+		while(hitStun){
+			Debug.Log(body.velocity.y);
+			if(body.velocity.y < 0.1f){
+				Debug.Log("gravity 0");
+				body.gravityScale = 0;
+				yield return new WaitForEndOfFrame();
+			}
+		yield return new WaitForEndOfFrame();
+		}
+		body.gravityScale = gravity;
 	}
 
-	public IEnumerator SetKnockBack(float xVelocity, float yVelocity, float duration){
-		
+	public void Launch(){
+		body.velocity = new Vector2(0, LaunchUnitHeight(launchHeight));	
+	}
+
+	public IEnumerator SetKnockBack(float xVelocity, float yVelocity){
+		body.velocity = new Vector3(xVelocity, yVelocity);
 
 
-		yield return new WaitForSeconds(duration);
+		yield return new WaitForEndOfFrame();
 	}
 }

@@ -78,4 +78,12 @@ public class SpecialProperties : MonoBehaviour {
 
 		yield return new WaitForEndOfFrame();
 	}
+
+	public void ReflectProjectile(){
+		Debug.Log("Reflect");
+		if(gameObject.layer == 11){
+			Debug.Log("EnemyProj");
+			body.velocity = new Vector2(body.velocity.x*-1, body.velocity.y);
+		}
+	}
 }

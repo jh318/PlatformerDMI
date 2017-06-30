@@ -160,8 +160,11 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(0.02f);
 		 //"Active"
 		if (sProperties.Targets.Count == 0) Debug.Log("MISS, Slash1");
-		foreach (GameObject target in sProperties.Targets) {
-			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.1f));
+		// foreach (GameObject target in sProperties.Targets) {
+		// 	StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.1f));
+		// }
+		foreach(GameObject target in sProperties.Targets){
+			target.GetComponent<SpecialProperties>().ReflectProjectile();
 		}
 		hitbox1.gameObject.SetActive(false);
 		yield return new WaitForEndOfFrame();

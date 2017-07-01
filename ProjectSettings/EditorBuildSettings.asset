@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/testRoom.unity
     guid: f7b43b5b713d0554f86848d387462f6f
+  - enabled: 1
+    path: Assets/MainMenu.unity
+    guid: 00000000000000000000000000000000

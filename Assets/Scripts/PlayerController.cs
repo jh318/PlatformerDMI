@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour {
 	float previousHorizontalInput;
 	float gravity;
 	HitboxController hitboxController;
+	HealthController healthController;
 	//Vector2 v;
 
 	//ActionChecks
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour {
 		gravity = body.gravityScale;
 		hitbox1.gameObject.SetActive(false);
 		hitboxController = hitbox1.GetComponent<HitboxController>();
+		healthController = GetComponent<HealthController>();
 	}
 
 	void Update(){
@@ -57,6 +59,7 @@ public class PlayerController : MonoBehaviour {
 		FlipSprite ();
 		SetVelocity ();
 		SetAnimations ();
+		Death();
 	}
 
 	void GetAxis(){
@@ -159,12 +162,13 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForEndOfFrame();
 		yield return new WaitForSeconds(0.02f);
 		 //"Active"
-		if (sProperties.Targets.Count == 0) Debug.Log("MISS, Slash1");
+		//if (sProperties.Targets.Count == 0) Debug.Log("MISS, Slash1");
 		// foreach (GameObject target in sProperties.Targets) {
 		// 	StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.1f));
 		// }
 		foreach(GameObject target in sProperties.Targets){
 			target.GetComponent<SpecialProperties>().ReflectProjectile();
+			Damage(3, target);
 		}
 		hitbox1.gameObject.SetActive(false);
 		yield return new WaitForEndOfFrame();
@@ -187,6 +191,8 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(0.03f);
 		foreach (GameObject target in sProperties.Targets) {
 			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.09f));
+			Damage(3, target);
+
 		}
 		hitbox1.gameObject.SetActive(false);
 		yield return new WaitForEndOfFrame();		
@@ -211,6 +217,8 @@ public class PlayerController : MonoBehaviour {
 		// }
 		foreach(GameObject target in sProperties.Targets){
 			StartCoroutine(target.GetComponent<SpecialProperties>().SetKnockBack((5.0f)*transform.right.x,5.0f));
+			Damage(4, target);
+
 		}
 		hitbox1.gameObject.SetActive(false);
 		yield return new WaitForEndOfFrame();	
@@ -230,6 +238,7 @@ public class PlayerController : MonoBehaviour {
 		if(sProperties.Targets.Count > 0){
 			foreach (GameObject target in sProperties.Targets) {
 			StartCoroutine(target.GetComponent<SpecialProperties>().Launcher());
+			Damage(3, target);
 			}
 		}
 		hitbox1.gameObject.SetActive(false); 
@@ -249,5 +258,18 @@ public class PlayerController : MonoBehaviour {
 			yield return new WaitForEndOfFrame();
 		}
 		body.gravityScale = gravity;
+	}
+
+	void Death(){
+		if(healthController.CurrentHealth <= 0){
+			gameObject.SetActive(false);
+		}
+	}
+
+	void Damage(float damage, GameObject target){
+		if(target.GetComponentInParent<HealthController>()){
+			target.GetComponentInParent<HealthController>().CurrentHealth -= damage;
+			Debug.Log(target.GetComponentInParent<HealthController>().CurrentHealth);
+		}
 	}
 }

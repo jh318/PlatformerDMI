@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 50281468472212184}
   - component: {fileID: 58262025866536532}
   - component: {fileID: 114544331078290190}
+  - component: {fileID: 114710197915736280}
   m_Layer: 11
-  m_Name: ProjectileBasicEnemy
+  m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,6 +119,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 470bee7ffd5cad54fba2dbde5892cd3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114710197915736280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432674584270816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a95abf3062f89f4ab4099331059a828, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!212 &212373085661828832
 SpriteRenderer:
   m_ObjectHideFlags: 1

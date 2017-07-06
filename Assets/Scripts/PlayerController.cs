@@ -283,7 +283,6 @@ public class PlayerController : MonoBehaviour {
 	void Damage(float damage, GameObject target){
 		if(target.GetComponentInParent<HealthController>()){
 			target.GetComponentInParent<HealthController>().CurrentHealth -= damage;
-			Debug.Log(target.GetComponentInParent<HealthController>().CurrentHealth);
 		}
 	}
 

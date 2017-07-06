@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+	public static PlayerController instance;
+
+
 	public float speed = 5.0f;
 	public float jumpForce = 200.0f;
 	public int jumpCountMax = 2;
@@ -41,6 +44,12 @@ public class PlayerController : MonoBehaviour {
 	}
 	public bool canJump {
 		get { return previousVerticalInput < 0.5f && verticalInput >= 0.5f; }
+	}
+
+	void Awake(){
+		if(instance == null){
+			instance = this;
+		}
 	}
 
 	void Start(){
@@ -168,6 +177,7 @@ public class PlayerController : MonoBehaviour {
 		// 	StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.1f));
 		// }
 		foreach(GameObject target in sProperties.Targets){
+			AudioManager.PlayEffect("Deflect");
 			target.GetComponent<SpecialProperties>().ReflectProjectile();
 			Damage(3, target);
 		}
@@ -275,5 +285,10 @@ public class PlayerController : MonoBehaviour {
 			target.GetComponentInParent<HealthController>().CurrentHealth -= damage;
 			Debug.Log(target.GetComponentInParent<HealthController>().CurrentHealth);
 		}
+	}
+
+	void OnDisable(){
+		Debug.Log("PlayerOnDisable");
+		SceneLoader.instance.LoadScene("MainMenu");
 	}
 }

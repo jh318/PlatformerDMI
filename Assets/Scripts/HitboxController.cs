@@ -44,6 +44,7 @@ public class HitboxController : MonoBehaviour {
 
 	void OnDisable(){
 		targets.Clear();
-		parentProperties.Targets.Clear();
-	}
+		if(parentProperties = GetComponentInParent<SpecialProperties>())
+			parentProperties.Targets.Clear();
+	}	
 }

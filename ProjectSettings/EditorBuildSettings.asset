@@ -10,4 +10,7 @@ EditorBuildSettings:
     guid: f7b43b5b713d0554f86848d387462f6f
   - enabled: 1
     path: Assets/MainMenu.unity
+    guid: 8ce4d772b2c817e4d8a4774920df80e4
+  - enabled: 1
+    path: Assets/GrayBoxScene.unity
     guid: 00000000000000000000000000000000

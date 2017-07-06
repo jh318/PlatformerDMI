@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4344111562331170}
   - component: {fileID: 114109938772282998}
-  - component: {fileID: 114466326898390952}
   - component: {fileID: 114976552782298320}
   m_Layer: 0
   m_Name: GameManager
@@ -55,25 +54,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 1432674584270816, guid: 43c1ba7c13440004a8a6f07e4f33e145, type: 2}
---- !u!114 &114466326898390952
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1954037165136654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4726f909304b564495bcee31d53253c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  music: {fileID: 0}
-  autoStartMusic: 1
-  clips: []
-  mixers: []
-  musicMixer: {fileID: 0}
-  defaultSFXMixer: {fileID: 0}
-  sfxSourcesCount: 5
-  minPlayInterval: 0.01
 --- !u!114 &114976552782298320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,4 +65,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90fd762fbf1596446b27d7d69b7ea781, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restartScene: testRoom
+  restartScene: MainMenu

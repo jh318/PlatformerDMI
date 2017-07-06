@@ -157,6 +157,7 @@ public class PlayerController : MonoBehaviour {
 	//Actions and Attacking
 	IEnumerator Slash1(){
 		anim.Play("Slash1");
+		AudioManager.PlayEffect("Slash1");
 		//"StartUp"
 		hitbox1.gameObject.SetActive(true);
 		yield return new WaitForEndOfFrame();
@@ -186,6 +187,7 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator Slash2(){
 		slashChain1 = false;
 		anim.Play("Slash2");
+		AudioManager.PlayEffect("Slash2");
 		hitbox1.gameObject.SetActive(true);
 		yield return new WaitForEndOfFrame();
 		yield return new WaitForSeconds(0.03f);
@@ -209,6 +211,7 @@ public class PlayerController : MonoBehaviour {
 	IEnumerator Slash3(){
 		slashChain2 = false;
 		anim.Play("Slash3");
+		AudioManager.PlayEffect("Slash3");
 		hitbox1.gameObject.SetActive(true);
 		yield return new WaitForEndOfFrame();
 		yield return new WaitForSeconds(0.03f);
@@ -231,6 +234,7 @@ public class PlayerController : MonoBehaviour {
 
 	IEnumerator Launcher(){
 		anim.Play("Launcher");
+		AudioManager.PlayEffect("Launch");
 		hitbox1.gameObject.SetActive(true);
 		yield return new WaitForEndOfFrame(); //Wait for OnEnable()
 		yield return new WaitForSeconds(0.1f); //Active

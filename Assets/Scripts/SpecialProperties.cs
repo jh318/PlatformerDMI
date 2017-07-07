@@ -57,9 +57,7 @@ public class SpecialProperties : MonoBehaviour {
 		yield return new WaitForEndOfFrame();
 		body.velocity = new Vector2(0, LaunchUnitHeight(launchHeight));
 		while(hitStun){
-			Debug.Log(body.velocity.y);
 			if(body.velocity.y < 0.1f){
-				Debug.Log("gravity 0");
 				body.gravityScale = 0;
 				yield return new WaitForEndOfFrame();
 			}

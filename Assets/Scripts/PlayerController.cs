@@ -251,8 +251,8 @@ public class PlayerController : MonoBehaviour {
 		if (sProperties.Targets.Count == 0) Debug.Log("MISS, Launcher");
 		if(sProperties.Targets.Count > 0){
 			foreach (GameObject target in sProperties.Targets) {
-			StartCoroutine(target.GetComponent<SpecialProperties>().Launcher());
-			Damage(3, target);
+				if(target.activeInHierarchy) StartCoroutine(target.GetComponent<SpecialProperties>().Launcher());
+				Damage(3, target);
 			}
 		}
 		hitbox1.gameObject.SetActive(false); 

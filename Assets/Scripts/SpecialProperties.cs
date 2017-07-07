@@ -53,7 +53,7 @@ public class SpecialProperties : MonoBehaviour {
 	}
 
 	public IEnumerator Launcher(){
-		StartCoroutine(SetHitStun(1.0f, false));
+			StartCoroutine(SetHitStun(1.0f, false));
 		yield return new WaitForEndOfFrame();
 		body.velocity = new Vector2(0, LaunchUnitHeight(launchHeight));
 		while(hitStun){
@@ -66,6 +66,7 @@ public class SpecialProperties : MonoBehaviour {
 		yield return new WaitForEndOfFrame();
 		}
 		body.gravityScale = gravity;
+			
 	}
 
 	public void Launch(){

@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Update(){
-		//DeathCheck();
 	}
 
 	void DeathCheck(){

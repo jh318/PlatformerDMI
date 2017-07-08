@@ -178,7 +178,7 @@ public class PlayerController : MonoBehaviour {
 		// }
 		foreach(GameObject target in sProperties.Targets){
 			AudioManager.PlayEffect("Deflect");
-			target.GetComponent<SpecialProperties>().ReflectProjectile();
+			if(target.activeInHierarchy) target.GetComponent<SpecialProperties>().ReflectProjectile();
 			Damage(3, target);
 		}
 		hitbox1.gameObject.SetActive(false);
@@ -202,7 +202,7 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForEndOfFrame();
 		yield return new WaitForSeconds(0.03f);
 		foreach (GameObject target in sProperties.Targets) {
-			StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.09f));
+			if(target.activeInHierarchy) StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.09f));
 			Damage(3, target);
 
 		}
@@ -229,7 +229,7 @@ public class PlayerController : MonoBehaviour {
 		// 	StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(1.0f));
 		// }
 		foreach(GameObject target in sProperties.Targets){
-			StartCoroutine(target.GetComponent<SpecialProperties>().SetKnockBack((5.0f)*transform.right.x,5.0f));
+			if(target.activeInHierarchy) StartCoroutine(target.GetComponent<SpecialProperties>().SetKnockBack((5.0f)*transform.right.x,5.0f));
 			Damage(4, target);
 
 		}

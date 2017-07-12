@@ -45,6 +45,11 @@ public class PlayerController : MonoBehaviour {
 	public bool canJump {
 		get { return previousVerticalInput < 0.5f && verticalInput >= 0.5f; }
 	}
+	public int JumpCount{
+		get { return jumpCount;}
+		set { jumpCount = value;}
+	}
+	
 
 	void Awake(){
 		if(instance == null){
@@ -89,7 +94,7 @@ public class PlayerController : MonoBehaviour {
 	void SetVelocity(){
 		body.velocity = new Vector2(horizontalInput * speed, body.velocity.y);
 
-		if (canJump && (isGrounded || jumpCount < jumpCountMax)) {
+		if (canJump && (isGrounded || (jumpCount < jumpCountMax && !attacking))) {
 			jumpCount++;
 			body.velocity = new Vector2(body.velocity.x, JumpVelocity(jumpHeight));
 		}
@@ -229,15 +234,15 @@ public class PlayerController : MonoBehaviour {
 		// 	StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(1.0f));
 		// }
 		foreach(GameObject target in sProperties.Targets){
-			if(target.activeInHierarchy) StartCoroutine(target.GetComponent<SpecialProperties>().SetKnockBack((5.0f)*transform.right.x,5.0f));
+			if(target.activeInHierarchy) StartCoroutine(target.GetComponent<SpecialProperties>().SetKnockBack((1.3f)*transform.right.x,8.0f));
 			Damage(4, target);
 
 		}
 		hitbox1.gameObject.SetActive(false);
 		yield return new WaitForEndOfFrame();	
-		yield return new WaitForSeconds(0.4f); //Recovery 1
+		yield return new WaitForSeconds(0.3f); //Recovery 1
 		//Extra Time to Chain/Cancel
-		yield return new WaitForSeconds(0.4f); //Recovery 2 Final
+		yield return new WaitForSeconds(0.3f); //Recovery 2 Final
 		attacking = false;
 		anim.Play("Neutral");
 	}

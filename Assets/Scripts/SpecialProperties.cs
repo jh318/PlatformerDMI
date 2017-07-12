@@ -82,6 +82,7 @@ public class SpecialProperties : MonoBehaviour {
 		if(gameObject.layer == 11){
 			body.velocity = new Vector2(body.velocity.x*-1, body.velocity.y);
 			gameObject.layer = 10;
+			PlayerController.instance.JumpCount--;
 		}
 	}
 }

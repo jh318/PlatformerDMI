@@ -45,6 +45,7 @@ public class EnemyController : MonoBehaviour {
 	void Death(){
 		if(healthController.CurrentHealth <= 0){
 			gameObject.SetActive(false);
+			PlayerController.instance.JumpCount--;
 		}
 	}
 }

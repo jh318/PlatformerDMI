@@ -11,7 +11,7 @@ public class ComboTextController : MonoBehaviour {
 	Text comboText;
 
 	float longestAirTime = 0.0f;
-	string highestRating = "";
+	string highestRating = "Default";
 
 	public float LongestAirTime{
 		get { return longestAirTime; }

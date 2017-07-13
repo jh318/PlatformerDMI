@@ -16,10 +16,8 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void DeathCheck(){
-		Debug.Log("Update");
 		if(PlayerController.instance.gameObject.activeSelf == false){
-			Debug.Log("Here");
-			GetComponent<SceneLoader>().LoadScene("MainMenu");
+			//GetComponent<SceneLoader>().LoadScene("MainMenu");
 		}
 	}
 }

@@ -8,12 +8,20 @@ public class HealthController : MonoBehaviour {
 
 	float currentHealth;
 
+	public delegate void OnHealthChanged(HealthController hc, float health, float prevHealth, float maxHealth);
+	public static event OnHealthChanged onHealthChanged = delegate{};
+
 	public float CurrentHealth{
 		get {return currentHealth; }
-		set {currentHealth = value; }
+		set {
+			if (currentHealth != value) {
+				onHealthChanged(this, value, currentHealth, maxHealth);
+				currentHealth = value;
+			}
+		}
 	}
 
 	void Start(){
-		currentHealth = maxHealth;
+		CurrentHealth = maxHealth;
 	}
 }

@@ -5,31 +5,29 @@ using UnityEngine.UI;
 
 public class HealthUIController : MonoBehaviour {
 
-	public Gradient gradient;
 
-	HealthController healthController;
-	Slider slider;
+
+	Image healthBar;
 
 	float prevHealth;
 
 
-	void Start(){
-		slider = GetComponent<Slider>();
-		healthController = GetComponent<HealthController>();
-		UpdateBar(healthController, healthController.CurrentHealth, prevHealth, healthController.maxHealth);
+	void Awake(){
+		healthBar = GetComponent<Image>();
+
 	}
 
-	void Update(){
-		prevHealth = healthController.CurrentHealth;
-		if(healthController.CurrentHealth < prevHealth){
-			UpdateBar(healthController, healthController.CurrentHealth, prevHealth, healthController.maxHealth);
-		}
+	void OnEnable () {	
+		HealthController.onHealthChanged += UpdateBar;
 	}
 
-	public void UpdateBar(HealthController healthController, float health, float prevHealth, float maxHealth){
-		if(healthController.gameObject.GetComponent<PlayerController>()){
-			float percent = health / maxHealth;
-			slider.value = percent;
+	void OnDisable () {
+		HealthController.onHealthChanged -= UpdateBar;
+	}
+
+	public void UpdateBar(HealthController hc, float health, float prevHealth, float maxHealth){
+		if(hc.gameObject.GetComponentInParent<PlayerController>()){
+			healthBar.fillAmount = health / maxHealth;
 		}
 	}
 

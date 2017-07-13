@@ -19,4 +19,7 @@ EditorBuildSettings:
     guid: 13bf4dd627adff04aaa864a075fc64af
   - enabled: 1
     path: Assets/Scenes/GameManager.unity
+    guid: cecc38ffe90492748b82bf600e96ac00
+  - enabled: 1
+    path: Assets/Scenes/ScoreScreen.unity
     guid: 00000000000000000000000000000000

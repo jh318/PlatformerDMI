@@ -9,7 +9,7 @@ public class TextController : MonoBehaviour {
 
 	public Text textUI;
 	public GameObject textBox;
-	public GameObject pressA;
+	public GameObject InteractButton;
 
 	Queue<IEnumerator> queue = new Queue<IEnumerator>();
 
@@ -17,7 +17,7 @@ public class TextController : MonoBehaviour {
 	void Awake(){
 		if(instance == null){
 			instance = this;
-			pressA.SetActive(false);
+			InteractButton.SetActive(false);
 			textUI.text = "";
 		}
 		else{
@@ -89,16 +89,16 @@ public class TextController : MonoBehaviour {
 	}
 
 	IEnumerator WaitForInputCoroutine(){
-		aPressed = false;
-		pressA.SetActive(true);
-		while(!aPressed){
+		interactPressed = false;
+		InteractButton.SetActive(true);
+		while(!interactPressed){
 			yield return new WaitForEndOfFrame();
 		}
-			pressA.SetActive(false);
+			InteractButton.SetActive(false);
 	}
 
-	bool aPressed = false;
+	bool interactPressed = false;
 	void Update(){
-		if(Input.GetKeyDown(KeyCode.A)) aPressed = true;
+		if(Input.GetButtonDown("InteractButton")) interactPressed = true;
 	}
 }

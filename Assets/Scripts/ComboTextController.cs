@@ -8,9 +8,9 @@ public class ComboTextController : MonoBehaviour {
 	public static ComboTextController instance;
 
 	float airTimer = 0.0f;
-	Text comboText;
+	public Text comboText;
 
-	float longestAirTime = 0.0f;
+	static float longestAirTime = 0.0f;
 	string highestRating = "Default";
 
 	public float LongestAirTime{
@@ -23,6 +23,8 @@ public class ComboTextController : MonoBehaviour {
 	void Awake(){
 		if(instance == null){
 			instance = this;
+		} else{
+			Destroy(gameObject);
 		}
 	}
 
@@ -32,6 +34,9 @@ public class ComboTextController : MonoBehaviour {
 	}
 	
 	void Update () {
+		if(PlayerController.instance == null){
+			return;
+		}
 		if(!PlayerController.instance.isGrounded){
 			airTimer += Time.deltaTime;
 			//comboText.text = airTimer.ToString("F3");

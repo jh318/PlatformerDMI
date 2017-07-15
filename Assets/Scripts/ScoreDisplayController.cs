@@ -9,7 +9,14 @@ public class ScoreDisplayController : MonoBehaviour {
 	public Text airTimeText;
 
 	void Start(){
-		styleText.text = ComboTextController.instance.HighestRating.ToString();
-		airTimeText.text = ComboTextController.instance.LongestAirTime.ToString("F3");
+		styleText.text = "Ranking: " + ComboTextController.instance.HighestRating.ToString();
+		airTimeText.text = "Air Time: " + ComboTextController.instance.LongestAirTime.ToString("F3") + " Seconds";
+		DisablePlayerUI();
+	}
+
+	void DisablePlayerUI(){
+		if(UIManager.instance.isActiveAndEnabled){
+			UIManager.instance.gameObject.SetActive(false);
+		}
 	}
 }

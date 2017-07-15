@@ -9,6 +9,9 @@ public class MainMenuController : MonoBehaviour {
 
 	void Start(){
 		SceneManager.LoadScene("GameManager", LoadSceneMode.Additive);
+		if(UIManager.instance.enabled){
+			UIManager.instance.gameObject.SetActive(false);
+		}
 	}
 	void Update(){
 		if(Input.GetButtonDown("SlashButton")){

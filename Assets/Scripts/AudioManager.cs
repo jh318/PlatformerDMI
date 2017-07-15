@@ -62,7 +62,7 @@ public class AudioManager : MonoBehaviour {
 		}
 		else if (_instance != this) {
 			Debug.LogWarning("AudioManager already initialized, destroying duplicate");
-			GameObject.Destroy(this);
+			GameObject.Destroy(gameObject);
 		}
 	}
 

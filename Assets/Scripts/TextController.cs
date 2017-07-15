@@ -30,11 +30,12 @@ public class TextController : MonoBehaviour {
 	}
 
 	void Start(){
-	TextController.ShowText("Show teeeext");
-	TextController.TypeText("Type teeeext");
-	TextController.WaitForInput();
-	TextController.ClearText();
-	TextController.TypeText("You waited");
+	//TextController.ShowText("Show teeeext");
+	//TextController.TypeText("Type teeeext");
+	//TextController.WaitForInput();
+	//TextController.ClearText();
+	//TextController.TypeText("You waited");
+	textBox.SetActive(false);
 	}
 
 	IEnumerator ProcessQueue(){

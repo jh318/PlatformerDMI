@@ -178,13 +178,17 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(0.02f);
 		 //"Active"
 		//if (sProperties.Targets.Count == 0) Debug.Log("MISS, Slash1");
-		// foreach (GameObject target in sProperties.Targets) {
-		// 	StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.1f));
-		// }
+		foreach (GameObject target in sProperties.Targets) {
+		}
 		foreach(GameObject target in sProperties.Targets){
-			AudioManager.PlayEffect("Deflect");
-			if(target.activeInHierarchy) target.GetComponent<SpecialProperties>().ReflectProjectile();
-			Damage(3, target);
+			if (target.gameObject.tag == "Enemy") {
+				StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.1f));
+				Damage(3, target);
+			}
+			if(target.activeInHierarchy && target.gameObject.tag == "Projectile"){
+				AudioManager.PlayEffect("Deflect");
+				target.GetComponent<SpecialProperties>().ReflectProjectile();
+			} 
 		}
 		hitbox1.gameObject.SetActive(false);
 		yield return new WaitForEndOfFrame();
@@ -207,10 +211,16 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForEndOfFrame();
 		yield return new WaitForSeconds(0.03f);
 		foreach (GameObject target in sProperties.Targets) {
-			if(target.activeInHierarchy) StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.09f));
-			Damage(3, target);
-
+			if(target.activeInHierarchy && target.gameObject.tag == "Enemy"){
+				StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(0.09f));
+				Damage(3, target);
+			} 
+			if(target.activeInHierarchy && target.gameObject.tag == "Projectile"){
+				AudioManager.PlayEffect("Deflect");
+				target.GetComponent<SpecialProperties>().ReflectProjectile();
+			}
 		}
+
 		hitbox1.gameObject.SetActive(false);
 		yield return new WaitForEndOfFrame();		
 		yield return new WaitForSeconds(0.1f);
@@ -234,8 +244,14 @@ public class PlayerController : MonoBehaviour {
 		// 	StartCoroutine(target.GetComponent<SpecialProperties>().SetHitStun(1.0f));
 		// }
 		foreach(GameObject target in sProperties.Targets){
-			if(target.activeInHierarchy) StartCoroutine(target.GetComponent<SpecialProperties>().SetKnockBack((1.3f)*transform.right.x,8.0f));
-			Damage(4, target);
+			if(target.activeInHierarchy && target.gameObject.tag == "Enemy"){
+				StartCoroutine(target.GetComponent<SpecialProperties>().SetKnockBack((1.3f)*transform.right.x,8.0f));
+				Damage(4, target);
+			} 
+			if(target.activeInHierarchy && target.gameObject.tag == "Projectile"){
+				AudioManager.PlayEffect("Deflect");
+				target.GetComponent<SpecialProperties>().ReflectProjectile();
+			}
 
 		}
 		hitbox1.gameObject.SetActive(false);

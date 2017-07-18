@@ -24,12 +24,12 @@ public class ComboTextController : MonoBehaviour {
 		if(instance == null){
 			instance = this;
 		} else{
-			Destroy(gameObject);
+		//	Destroy(gameObject);
 		}
 	}
 
 	void Start () {
-		comboText = GetComponent<Text>();
+		//comboText = GetComponent<Text>();
 		highestRating = "Grounded!!!";
 	}
 	
@@ -48,7 +48,7 @@ public class ComboTextController : MonoBehaviour {
 		}
 		ComboCommentary();
 		Ranker();
-		Debug.Log(highestRating);
+		//Debug.Log(highestRating);
 	}
 
 	void ComboCommentary(){

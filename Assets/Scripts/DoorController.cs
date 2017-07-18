@@ -6,15 +6,16 @@ using UnityEngine.SceneManagement;
 public class DoorController : MonoBehaviour {
 
 	public string roomToLoad;
+	public Vector3 levelPosition = new Vector3(0,0,0);
 
 	void OnTriggerStay2D(Collider2D other)
 	{
 		if(Input.GetAxisRaw ("Vertical") < -0.5f){
-			LoadRoom(roomToLoad);
+			LoadRoom();
 		}
 	}
 
-	void LoadRoom(string roomName){
-		SceneManager.LoadScene(roomName);
+	void LoadRoom(){
+		GameManager.LoadLevelPosition(roomToLoad, levelPosition);
 	}
 }

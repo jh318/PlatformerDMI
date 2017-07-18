@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4222543065960600}
   - component: {fileID: 61178925811963670}
-  - component: {fileID: 114559601949094468}
   - component: {fileID: 212174582056439934}
+  - component: {fileID: 114559601949094468}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -79,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomToLoad: RedStage
+  levelPosition: {x: 0, y: 0, z: 0}
 --- !u!212 &212174582056439934
 SpriteRenderer:
   m_ObjectHideFlags: 1

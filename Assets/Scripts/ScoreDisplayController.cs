@@ -15,8 +15,6 @@ public class ScoreDisplayController : MonoBehaviour {
 	}
 
 	void DisablePlayerUI(){
-		if(UIManager.instance.isActiveAndEnabled){
-			UIManager.instance.gameObject.SetActive(false);
-		}
+		UIManager.ShowHide(false);
 	}
 }

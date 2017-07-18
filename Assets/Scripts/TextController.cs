@@ -56,8 +56,8 @@ public class TextController : MonoBehaviour {
 		yield return new WaitForSeconds(0.5f);
 	}
 
-		public static void ClearText(){
-			instance.queue.Enqueue(instance.ClearTextCoroutine());
+	public static void ClearText(){
+		instance.queue.Enqueue(instance.ClearTextCoroutine());
 	}
 
 	IEnumerator ClearTextCoroutine(){

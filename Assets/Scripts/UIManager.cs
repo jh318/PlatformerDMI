@@ -13,16 +13,11 @@ public class UIManager : MonoBehaviour {
 	void Awake(){
 		if(instance == null){
 			instance = this;
+			DontDestroyOnLoad(gameObject);
 		}else{
 			Destroy(gameObject);
 		}
 	}
-
-	// void Start(){
-	// 	healthBar.SetActive(false);
-	// 		comboText.SetActive(false);
-	// 		textBox.SetActive(false);
-	// }
 
 	void OnEnable () {
 		SceneManager.activeSceneChanged += SceneChanged;
@@ -33,20 +28,18 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void SceneChanged (Scene fromScene, Scene toScene) {
-		if (toScene.name != "MainMenu" || toScene.name !=  "ScoreScreen") {
-			// activate stuff
-			healthBar.SetActive(true);
-			comboText.SetActive(true);
-			//textBox.SetActive(true);
-		}else{
-			healthBar.SetActive(false);
-			comboText.SetActive(false);
-			textBox.SetActive(false);
+		ShowHide (toScene.name != "MainMenu" && toScene.name !=  "ScoreScreen");
+	}
+
+	public static void ShowHide (bool show) {
+		if (show) {
+			instance.healthBar.SetActive(true);
+			instance.comboText.SetActive(true);
 		}
-		if(toScene.name == "RedStage"){
-			healthBar.SetActive(true);
-			comboText.SetActive(true);
+		else {
+			instance.healthBar.SetActive(false);
+			instance.comboText.SetActive(false);
+			instance.textBox.SetActive(false);
 		}
-	
 	}
 }

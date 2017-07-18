@@ -31,4 +31,19 @@
    <object id="1" x="0" y="0" width="64" height="64"/>
   </objectgroup>
  </tile>
+ <tile id="6">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="64" height="64"/>
+  </objectgroup>
+ </tile>
+ <tile id="7">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="64" height="64"/>
+  </objectgroup>
+ </tile>
+ <tile id="8">
+  <objectgroup draworder="index">
+   <object id="1" x="0" y="0" width="64" height="64"/>
+  </objectgroup>
+ </tile>
 </tileset>

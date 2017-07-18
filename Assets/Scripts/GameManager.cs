@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void OnDestroy () {
-		Debug.Log("FUCK");
+		//Debug.Log("FUCK");
 	}
 
 	void Update(){

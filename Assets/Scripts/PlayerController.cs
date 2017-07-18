@@ -309,6 +309,6 @@ public class PlayerController : MonoBehaviour {
 
 	void OnDisable(){
 		Debug.Log("PlayerOnDisable");
-		SceneLoader.instance.LoadScene("MainMenu");
+		//SceneLoader.instance.LoadScene("MainMenu");
 	}
 }

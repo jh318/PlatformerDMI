@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileName: ProjectileBasicEnemy
-  shoot: 1
+  shoot: 0
   startVelocity: {x: 0, y: 0}
   projectileVelocity: {x: 10, y: 0}
 --- !u!114 &114452148231518496

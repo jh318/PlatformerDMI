@@ -33,15 +33,20 @@ public class UIManager : MonoBehaviour {
 	}
 
 	void SceneChanged (Scene fromScene, Scene toScene) {
-		if (toScene.name != "MainMenu") {
+		if (toScene.name != "MainMenu" || toScene.name !=  "ScoreScreen") {
 			// activate stuff
 			healthBar.SetActive(true);
 			comboText.SetActive(true);
-			textBox.SetActive(true);
+			//textBox.SetActive(true);
 		}else{
 			healthBar.SetActive(false);
 			comboText.SetActive(false);
 			textBox.SetActive(false);
 		}
+		if(toScene.name == "RedStage"){
+			healthBar.SetActive(true);
+			comboText.SetActive(true);
+		}
+	
 	}
 }

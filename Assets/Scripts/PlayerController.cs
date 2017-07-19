@@ -15,6 +15,10 @@ public class PlayerController : MonoBehaviour {
 	public float jumpHeight = 2;
 	public float launchHeight = 2;
 
+	public SpriteRenderer heatImage1;
+	public SpriteRenderer heatImage2;
+	public ParticleSystem heatParticles;
+
 
 	Rigidbody2D body;
 	Animator anim;
@@ -65,6 +69,9 @@ public class PlayerController : MonoBehaviour {
 		hitbox1.gameObject.SetActive(false);
 		hitboxController = hitbox1.GetComponent<HitboxController>();
 		healthController = GetComponent<HealthController>();
+		heatParticles = GetComponentInChildren<ParticleSystem>();
+		heatParticles.gameObject.SetActive(false);
+
 	}
 
 	void Update(){
@@ -73,6 +80,8 @@ public class PlayerController : MonoBehaviour {
 		FlipSprite ();
 		SetVelocity ();
 		SetAnimations ();
+		//HeatUp();
+		HeatUpTwo();
 		Death();
 	}
 
@@ -310,5 +319,29 @@ public class PlayerController : MonoBehaviour {
 	void OnDisable(){
 		Debug.Log("PlayerOnDisable");
 		//SceneLoader.instance.LoadScene("MainMenu");
+	}
+	
+	// void HeatUp(){
+	// 	if(jumpCount < 0 && jumpCount >= -2){
+	// 		heatImage1.gameObject.SetActive(true);
+	// 	}
+	// 	else if(jumpCount < -2){
+	// 		heatImage1.gameObject.SetActive(true);
+	// 		heatImage2.gameObject.SetActive(true);
+	// 	}
+	// 	else{
+	// 		heatImage1.gameObject.SetActive(false);
+	// 		heatImage2.gameObject.SetActive(false);
+	// 	}
+	// }
+
+	void HeatUpTwo(){
+		if(jumpCount < 0){
+			heatParticles.gameObject.SetActive(true);
+		} 
+		
+		if(heatParticles.isPlaying && isGrounded){
+			heatParticles.gameObject.SetActive(false);
+		}
 	}
 }

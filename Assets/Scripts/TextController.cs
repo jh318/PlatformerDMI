@@ -12,7 +12,9 @@ public class TextController : MonoBehaviour {
 	public GameObject InteractButton;
 
 	Queue<IEnumerator> queue = new Queue<IEnumerator>();
-
+	public static int queueSize {
+		get { return instance.queue.Count; }
+	}
 
 	void Awake(){
 		if(instance == null){

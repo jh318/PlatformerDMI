@@ -13,9 +13,11 @@ public class TutorialSpawner : MonoBehaviour {
 		}
 	}
 	IEnumerator Respawn(){
-		yield return new WaitForEndOfFrame();
-		GameObject spawnedObject = Instantiate(spawnObject, transform.position, Quaternion.identity);
+		//yield return new WaitForEndOfFrame();
+		GameObject spawnedObject = Instantiate(spawnObject);
 		deathCheck = spawnedObject;
+		yield return new WaitForSeconds(2.0f);
+		spawnedObject.transform.position = transform.position;
 		yield return new WaitForEndOfFrame();
 	}
 }

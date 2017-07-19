@@ -74,7 +74,7 @@ public class TextController : MonoBehaviour {
 	IEnumerator TypeTextCoroutine (string str){
 		for(int i = 0; i < str.Length; i++){
 			textUI.text += str[i];
-			yield return new WaitForSeconds(0.2f);
+			yield return new WaitForSeconds(0.05f);
 		}
 	}
 

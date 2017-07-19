@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 61178925811963670}
   - component: {fileID: 212174582056439934}
   - component: {fileID: 114559601949094468}
+  - component: {fileID: 210806751968602880}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -80,6 +81,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomToLoad: RedStage
   levelPosition: {x: 0, y: 0, z: 0}
+--- !u!210 &210806751968602880
+SortingGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1645765857552062}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
 --- !u!212 &212174582056439934
 SpriteRenderer:
   m_ObjectHideFlags: 1

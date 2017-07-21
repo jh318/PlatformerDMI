@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour {
 		hitboxController = hitbox1.GetComponent<HitboxController>();
 		healthController = GetComponent<HealthController>();
 		heatParticles = GetComponentInChildren<ParticleSystem>();
-		heatParticles.gameObject.SetActive(false);
+		//heatParticles.gameObject.SetActive(false);
 
 	}
 
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour {
 		SetVelocity ();
 		SetAnimations ();
 		//HeatUp();
-		HeatUpTwo();
+		//HeatUpTwo();
 		Death();
 	}
 

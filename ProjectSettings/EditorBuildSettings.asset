@@ -20,6 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DoomTower.unity
     guid: 05d46a8234080cc4ca3c52b90759f287
-  - enabled: 1
+  - enabled: 0
     path: Assets/BossRoom.unity
     guid: 00000000000000000000000000000000

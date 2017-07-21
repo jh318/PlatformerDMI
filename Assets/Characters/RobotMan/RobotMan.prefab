@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 61367672048449548}
   - component: {fileID: 114533329562694806}
   - component: {fileID: 114759788976535220}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RobotMan
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -590,7 +590,7 @@ MonoBehaviour:
   speed: 8
   jumpForce: 7
   jumpCountMax: 2
-  hitbox1: {fileID: 0}
+  hitbox1: {fileID: 61613987897324194}
   launchForce: 7
   jumpHeight: 3.2
   launchHeight: 3.4

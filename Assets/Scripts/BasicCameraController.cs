@@ -18,6 +18,17 @@ public class BasicCameraController : MonoBehaviour {
 	float movingOffsetX = 0;
 	float movingOffsetY = 0;
 
+	void Start(){
+		if(GameManager.instance.PlayerIsZero && !GameManager.instance.PlayerIsDemonRobot ){
+			Zero playerZero = FindObjectOfType<Zero>();
+			target = playerZero.gameObject;
+		}
+		else if(!GameManager.instance.PlayerIsZero && GameManager.instance.PlayerIsDemonRobot ){
+			DemonRobot playerRobot = FindObjectOfType<DemonRobot>();;
+			target = playerRobot.gameObject;
+		}
+	}
+
 	void LateUpdate(){
 		OffsetCameraToMovementX ();
 		OffsetCameraToMovementY ();

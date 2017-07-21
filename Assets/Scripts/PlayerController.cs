@@ -69,9 +69,8 @@ public class PlayerController : MonoBehaviour {
 		hitbox1.gameObject.SetActive(false);
 		hitboxController = hitbox1.GetComponent<HitboxController>();
 		healthController = GetComponent<HealthController>();
-		heatParticles = GetComponentInChildren<ParticleSystem>();
-		//heatParticles.gameObject.SetActive(false);
-
+		if(GameManager.instance.PlayerIsZero && !GameManager.instance.PlayerIsDemonRobot ) heatParticles = GetComponentInChildren<ParticleSystem>();
+		if(GameManager.instance.PlayerIsZero && !GameManager.instance.PlayerIsDemonRobot ) heatParticles.gameObject.SetActive(false);
 	}
 
 	void Update(){
@@ -81,7 +80,7 @@ public class PlayerController : MonoBehaviour {
 		SetVelocity ();
 		SetAnimations ();
 		//HeatUp();
-		//HeatUpTwo();
+		if(GameManager.instance.PlayerIsZero && !GameManager.instance.PlayerIsDemonRobot) HeatUpTwo();
 		Death();
 	}
 
@@ -339,7 +338,7 @@ public class PlayerController : MonoBehaviour {
 		if(jumpCount < 0){
 			heatParticles.gameObject.SetActive(true);
 		} 
-		
+	
 		if(heatParticles.isPlaying && isGrounded){
 			heatParticles.gameObject.SetActive(false);
 		}

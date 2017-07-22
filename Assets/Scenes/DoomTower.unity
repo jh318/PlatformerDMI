@@ -1969,6 +1969,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114602437441851314, guid: e8f59108a439895498724dd61c8752ed,
+        type: 2}
+      propertyPath: playerIsMechaman
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8f59108a439895498724dd61c8752ed, type: 2}
   m_IsPrefabParent: 0

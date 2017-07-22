@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 61367672048449548}
   - component: {fileID: 114533329562694806}
   - component: {fileID: 114759788976535220}
+  - component: {fileID: 114690613866163434}
   m_Layer: 8
   m_Name: RobotMan
   m_TagString: Player
@@ -327,7 +328,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1861736726943694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.342, y: -8.572, z: 0}
+  m_LocalPosition: {x: -5.93, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4688086728556844}
@@ -617,6 +618,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5aae0dc2e11ab354494e8c55d1fc03dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114690613866163434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1861736726943694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e6c608c508db444c8bbe052f330acf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114759788976535220

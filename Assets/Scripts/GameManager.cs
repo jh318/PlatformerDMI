@@ -7,12 +7,18 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager instance;
 
-	bool playerIsDemonRobot = true;
-	bool playerIsZero = true;
+	public bool playerIsMechaman = false;
+	bool playerIsDemonRobot = false;
+	bool playerIsZero = false;
+
+	public bool PlayerIsMechaman{
+		get { return playerIsMechaman; }
+		set { playerIsMechaman = value;}
+	}
 
 	public bool PlayerIsDemonRobot{
-		get{ return playerIsDemonRobot; }
-		set {playerIsDemonRobot = value;}
+		get { return playerIsDemonRobot; }
+		set { playerIsDemonRobot = value; }
 	}
 	
 	public bool PlayerIsZero{
@@ -33,7 +39,6 @@ public class GameManager : MonoBehaviour {
 	void OnEnable()
 	{
 		SceneManager.sceneLoaded += OnLevelFinishedLoading;
-		Debug.Log("EnabledGM");
 	}
 
 	void OnDisable()
@@ -47,9 +52,9 @@ public class GameManager : MonoBehaviour {
 			EnablePlayerCharacter();
 		}
 		
-		Debug.Log("Level Loaded");
-		Debug.Log(scene.name);
-		Debug.Log(mode);
+		//Debug.Log("Level Loaded");
+		//Debug.Log(scene.name);
+		//Debug.Log(mode);
 	}
 
 	void OnDestroy () {
@@ -74,23 +79,17 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void EnablePlayerCharacter(){
-		if(playerIsDemonRobot && !playerIsZero){
-			Zero playerZero = FindObjectOfType<Zero>();
-			playerZero.GetComponent<PlayerController>().enabled = false;
-			playerZero.gameObject.SetActive(false);
-			DemonRobot playerRobot = FindObjectOfType<DemonRobot>();
-			playerRobot.gameObject.SetActive(true);
-			playerRobot.GetComponent<PlayerController>().enabled = true;
-
+		if(playerIsZero){
+			GameObject playerObject = Spawner.Spawn("Zero");
+			playerObject.transform.position = FindObjectOfType<CharacterSpawnPoint>().transform.position;
 		}
-		if(playerIsZero && !playerIsDemonRobot){
-			DemonRobot playerRobot = FindObjectOfType<DemonRobot>();
-			playerRobot.GetComponent<PlayerController>().enabled = false;
-			playerRobot.gameObject.SetActive(false);
-			Zero playerZero = FindObjectOfType<Zero>();
-			playerZero.gameObject.SetActive(true);
-			playerZero.GetComponent<PlayerController>().enabled = true;
-
+		if(playerIsDemonRobot){
+			GameObject playerObject = Spawner.Spawn("RobotMan");
+			playerObject.transform.position = FindObjectOfType<CharacterSpawnPoint>().transform.position;
+		}
+		if(playerIsMechaman){
+			GameObject playerObject = Spawner.Spawn("MechaMan");
+			playerObject.transform.position = FindObjectOfType<CharacterSpawnPoint>().transform.position;
 		}
 	}
 }

@@ -585,6 +585,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 1432674584270816, guid: 43c1ba7c13440004a8a6f07e4f33e145, type: 2}
+  - {fileID: 1861736726943694, guid: 0d2d149fc9b77ac49892ff7f83c0d754, type: 2}
+  - {fileID: 1610774178438986, guid: 03b534f98758c3d40a284074fce58148, type: 2}
+  - {fileID: 1176133065350412, guid: 3fe3bf659d673c9469ec6bf25ee033d1, type: 2}
 --- !u!114 &114602437441851314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -596,6 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: babc83ddad0f3794483689f1635b53bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerIsMechaman: 0
 --- !u!114 &114683752663297692
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -942,7 +946,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 393.00003, y: -82}
+  m_AnchoredPosition: {x: 393, y: -82}
   m_SizeDelta: {x: 96, y: 709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224981600147154268

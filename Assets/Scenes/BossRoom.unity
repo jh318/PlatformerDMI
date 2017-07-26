@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e0f890bfb01c24aa4208593c6f2bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetPoint: BossRoom
+  resetPoint: ScoreScreen
 --- !u!61 &109680982
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,6 +13,9 @@ public class TextTrigger : MonoBehaviour {
 			TextController.TypeText("X to Launch!");
 			TextController.WaitForInput();
 			TextController.ClearText();
+			TextController.TypeText("Down to Interact with stuff! (Like Doors)");
+			TextController.WaitForInput();
+			TextController.ClearText();
 			gameObject.SetActive(false);
 		}
 	}

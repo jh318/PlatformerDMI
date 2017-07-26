@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour {
 	float gravity;
 	HitboxController hitboxController;
 	HealthController healthController;
+	GameObject mechaThrusters;
 	//Vector2 v;
 
 	//ActionChecks
@@ -75,6 +76,7 @@ public class PlayerController : MonoBehaviour {
 		healthController = GetComponent<HealthController>();
 		if(GameManager.instance.PlayerIsZero ) heatParticles = GetComponentInChildren<ParticleSystem>();
 		if(GameManager.instance.PlayerIsZero ) heatParticles.gameObject.SetActive(false);
+		if(GameManager.instance.playerIsMechaman) mechaThrusters = GetComponentInChildren<ParticleSystem>().gameObject;
 	}
 
 	void Update(){
@@ -97,6 +99,7 @@ public class PlayerController : MonoBehaviour {
 	void FlipSprite(){
 		if (horizontalInput > 0) {
 			transform.right = Vector3.right;
+
 		} 
 		else if (horizontalInput < 0) {
 			transform.right = -Vector3.right;

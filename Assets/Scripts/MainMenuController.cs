@@ -11,7 +11,7 @@ public class MainMenuController : MonoBehaviour {
 		//SceneManager.LoadScene("GameManager", LoadSceneMode.Additive);
 	}
 	void Update(){
-		if(Input.GetButtonDown("SlashButton")){
+		if(Input.GetKeyDown(KeyCode.G)){
 			GameManager.instance.PlayerIsMechaman = false;
 			GameManager.instance.PlayerIsZero = false;
 			GameManager.instance.PlayerIsDemonRobot = true;
@@ -23,7 +23,7 @@ public class MainMenuController : MonoBehaviour {
 			GameManager.instance.PlayerIsZero = true;
 			GameManager.instance.GetComponent<SceneLoader>().LoadScene(sceneToLoad);
 		}
-		if(Input.GetKeyDown(KeyCode.X)){
+		if(Input.GetKeyDown(KeyCode.Z)){
 			GameManager.instance.PlayerIsMechaman = true;
 			GameManager.instance.PlayerIsDemonRobot = false;
 			GameManager.instance.PlayerIsZero = false;

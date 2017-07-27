@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4726f909304b564495bcee31d53253c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: 9bff1fd587ee658479968c9ad8dfb299, type: 3}
   autoStartMusic: 1
   clips:
   - {fileID: 8300000, guid: 5f6b34134ec643f4790cffa1fd870295, type: 3}
@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: babc83ddad0f3794483689f1635b53bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIsMechaman: 0
+  playerIsMechaman: 1
 --- !u!114 &114683752663297692
 MonoBehaviour:
   m_ObjectHideFlags: 1

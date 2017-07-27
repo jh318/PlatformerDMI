@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour {
 
 	public IEnumerator LoadLevelPositionCoroutine(string sceneName, Vector3 newPosition){
 		yield return SceneManager.LoadSceneAsync(sceneName);
+		if(PlayerController.instance.gameObject.active)
 		PlayerController.instance.transform.position = newPosition;
 	}
 

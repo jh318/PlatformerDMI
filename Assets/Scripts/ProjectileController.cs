@@ -5,9 +5,22 @@ using UnityEngine;
 public class ProjectileController : MonoBehaviour {
 
 	public float damage = 1.0f;
+	SpriteRenderer spriteRenderer;
+	Rigidbody2D body;
 
+	void Start(){
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		body = GetComponentInParent<Rigidbody2D>();
+	}
 
-
+	void Update(){
+		if(body.velocity.x > 0.0f)
+			transform.right = Vector3.right;
+	
+		if(body.velocity.x < 0.0f)
+			transform.right = -Vector3.right;
+		
+	}
 
 	///Layers
 	// 10 = ProjectileEnemy
